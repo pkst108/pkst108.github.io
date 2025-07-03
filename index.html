@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pkst108 的 GitHub 主页</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #232526 0%, #414345 100%);
+            color: #f5f5f5;
+            min-height: 100vh;
+        }
+        header, footer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            background: rgba(34, 40, 49, 0.95);
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        header {
+            top: 0;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 2px;
+            color: #00adb5;
+        }
+        nav a {
+            color: #f5f5f5;
+            text-decoration: none;
+            margin-left: 24px;
+            font-weight: 700;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #00adb5;
+        }
+        main {
+            padding: 96px 24px 80px 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .hero {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .hero img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid #00adb5;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 24px rgba(0,173,181,0.2);
+        }
+        .hero h2 {
+            font-size: 2.2rem;
+            margin: 0 0 12px 0;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #bdbdbd;
+        }
+        .section {
+            background: rgba(57, 62, 70, 0.95);
+            border-radius: 16px;
+            padding: 32px 24px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        .section h3 {
+            color: #00adb5;
+            margin-top: 0;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+        .project-card {
+            background: #393e46;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .project-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(0,173,181,0.15);
+        }
+        .project-card h4 {
+            margin: 0 0 8px 0;
+            color: #00adb5;
+        }
+        .project-card p {
+            color: #bdbdbd;
+            font-size: 1rem;
+        }
+        .project-card a {
+            color: #00adb5;
+            text-decoration: underline;
+            font-size: 0.98rem;
+        }
+        .contact {
+            text-align: center;
+        }
+        .contact a {
+            color: #00adb5;
+            margin: 0 12px;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .contact a:hover {
+            color: #f8b400;
+        }
+        footer {
+            bottom: 0;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: #bdbdbd;
+        }
+        @media (max-width: 600px) {
+            header, footer {
+                padding: 0 12px;
+            }
+            main {
+                padding: 80px 4px 64px 4px;
+            }
+            .section {
+                padding: 18px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>pkst108</h1>
+        <nav>
+            <a href="#about">关于我</a>
+            <a href="#projects">项目</a>
+            <a href="#contact">联系</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" alt="pkst108 头像">
+            <h2>欢迎来到 pkst108 的 GitHub 主页！</h2>
+            <p>热爱编程与开源，追求极致体验。这里展示我的项目、技能与成长之路。</p>
+        </section>
+        <section class="section" id="about">
+            <h3>关于我</h3>
+            <p>你好！我是 <b>pkst108</b>，一名热衷于技术创新的开发者。擅长 Web 前端、后端开发与自动化工具，喜欢用代码解决实际问题。热爱开源，乐于分享与协作。</p>
+            <ul>
+                <li>💻 技能：JavaScript / TypeScript / Python / Node.js / React / Vue / Git</li>
+                <li>🌏 现居：中国</li>
+                <li>🎯 兴趣：算法、UI 设计、自动化、AI 应用</li>
+            </ul>
+        </section>
+        <section class="section" id="projects">
+            <h3>精选项目</h3>
+            <div class="projects">
+                <div class="project-card">
+                    <h4>Cool Portfolio</h4>
+                    <p>一个响应式、极简风格的个人作品集网站，支持深色模式。</p>
+                    <a href="https://github.com/pkst108/cool-portfolio" target="_blank">GitHub 仓库</a>
+                </div>
+                <div class="project-card">
+                    <h4>AutoScript Runner</h4>
+                    <p>自动化脚本运行平台，支持多种语言和定时任务。</p>
+                    <a href="https://github.com/pkst108/autoscript-runner" target="_blank">GitHub 仓库</a>
+                </div>
+                <div class="project-card">
+                    <h4>AI Chatbot</h4>
+                    <p>基于 GPT 的智能聊天机器人，支持多平台集成。</p>
+                    <a href="https://github.com/pkst108/ai-chatbot" target="_blank">GitHub 仓库</a>
+                </div>
+            </div>
+        </section>
+        <section class="section contact" id="contact">
+            <h3>联系我</h3>
+            <p>欢迎通过以下方式与我交流合作：</p>
+            <a href="mailto:pkst108@example.com" title="Email"><span>📧</span></a>
+            <a href="https://github.com/pkst108" target="_blank" title="GitHub"><span>🐙</span></a>
+            <a href="https://twitter.com/pkst108" target="_blank" title="Twitter"><span>🐦</span></a>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 pkst108 | 由 GitHub Pages 强力驱动
+    </footer>
+</body>
+</html>
