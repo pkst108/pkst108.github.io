@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(2019)黔0103刑初821号阅卷问题清单</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "仿宋", "FangSong", "SimSun", serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+            padding-bottom: 60px;
+            padding-top: 80px;
+        }
+
+        .header-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .timestamp {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .title {
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .print-button {
+            position: fixed;
+            top: 60px;
+            right: 20px;
+            background-color: #1a5fb4;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 13px;
+            z-index: 1000;
+        }
+
+        .print-button:hover {
+            background-color: #0d4a9e;
+        }
+
+        .home-button {
+            position: fixed;
+            top: 60px;
+            left: 20px;
+            background-color: #1a5fb4;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 13px;
+            z-index: 1000;
+        }
+
+        .home-button:hover {
+            background-color: #0d4a9e;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content p {
+            text-indent: 2em;
+            margin-bottom: 15px;
+            line-height: 2;
+            text-align: justify;
+            font-size: 16px;
+        }
+
+        .content h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+
+        .footer-screen {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-top: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .source-path {
+            font-size: 13px;
+            color: #555;
+            max-width: 70%;
+            white-space: nowrap;
+            overflow-wrap: break-word;
+            hyphens: manual;
+        }
+
+        @media print {
+            .source-path {
+                max-width: 60%;
+                white-space: nowrap;
+                overflow-wrap: break-word;
+                word-break: break-all;
+                margin-right: 2em;
+            }
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: none;
+            }
+
+            .header-screen, .footer-screen, .print-button, .home-button, .side-nav {
+                display: none;
+            }
+
+            .content {
+                padding: 0;
+                margin: 0;
+                max-width: 100%;
+                box-shadow: none;
+            }
+
+            @page {
+                margin: 2cm 2cm 2.5cm 2cm;
+
+                @top-left {
+                    content: "";
+                    font-size: 12px;
+                    color: #333;
+                    vertical-align: bottom;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid #ccc;
+                }
+
+                @bottom-left {
+                    content: "";
+                    font-size: 12px !important;
+                    color: #333 !important;
+                    vertical-align: top;
+                    padding-top: 5px;
+                    white-space: pre-wrap;
+                    border-top: 1px solid #ccc !important;
+                }
+
+                @bottom-right {
+                    content: "第" counter(page) "页 共" counter(pages) "页";
+                    border-top: 1px solid #ccc !important;
+                    padding-top: 5px;
+                    vertical-align: top;
+                    font-size: 12px;
+                }
+            }
+
+            .print-qrcode-container {
+                display: flex !important;
+                position: fixed !important;
+                right: 1.2cm !important;
+                bottom: 0.6cm !important;
+                z-index: 9999 !important;
+                width: 48px !important;
+                height: 48px !important;
+                justify-content: flex-end !important;
+                align-items: flex-end !important;
+                background: none !important;
+                box-shadow: none !important;
+                pointer-events: none !important;
+            }
+            .print-qrcode-img {
+                width: 48px !important;
+                height: 48px !important;
+                object-fit: contain !important;
+                background: #fff !important;
+                border: 1px solid #ccc !important;
+                border-radius: 4px !important;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            @media screen {
+                .print-qrcode-container {
+                    display: none !important;
+                }
+            }
+        }
+    `;
+                @top-right {
+                    content: "(2019)黔0103刑初821号阅卷问题清单";
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-decoration: underline;
+                    vertical-align: bottom;
+                    padding-bottom: 5px;
+                    border-bottom: 1px solid #ccc;
+                }
+
+                @bottom-left {
+                    content: "来源：";
+                    font-size: 12px;
+                    color: #333;
+                    vertical-align: top;
+                    padding-top: 5px;
+                    white-space: pre-wrap;
+                    border-top: 1px solid #ccc;
+                }
+
+                @bottom-right {
+                    content: "第" counter(page) "页 共" counter(pages) "页";
+                    font-size: 12px;
+                    color: #333;
+                    vertical-align: top;
+                    padding-top: 5px;
+                    border-top: 1px solid #ccc;
+                }
+            }
+        }
+
+        
+        .document-title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            padding-top: 20px;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 40px;
+        }
+
+        .signature p {
+            text-align: right;
+            margin-bottom: 5px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .sub-section {
+            margin-left: 2em;
+            margin-bottom: 10px;
+        }
+
+        
+        @media (max-width: 600px) {
+            .content {
+                padding: 10px !important;
+                max-width: 100vw !important;
+                font-size: 15px;
+            }
+            .section, .sub-section {
+                margin-left: 0 !important;
+                padding-left: 0 !important;
+            }
+            .document-title, .content h1 {
+                font-size: 18px !important;
+                padding-top: 10px !important;
+            }
+            .footer-screen, .header-screen {
+                padding: 6px 8px !important;
+                font-size: 13px !important;
+            }
+            .print-button {
+                top: 50px !important;
+                right: 10px !important;
+                padding: 4px 8px !important;
+                font-size: 12px !important;
+            }
+            .home-button {
+                top: 50px !important;
+                left: 10px !important;
+                padding: 4px 8px !important;
+                font-size: 12px !important;
+            }
+        }
+
+        
+        .content, .section, .sub-section, .source-path {
+            word-break: break-all;
+            overflow-wrap: break-word;
+        }
+
+        
+        @media print {
+            .print-qrcode-container {
+                display: flex !important;
+                position: fixed !important;
+                right: 0cm !important;
+                bottom: -0.8cm !important;
+                margin: 0 !important;
+                z-index: 9999 !important;
+                width: auto !important;
+                height: auto !important;
+                pointer-events: none !important;
+                background: none !important;
+                box-shadow: none !important;
+                justify-content: flex-end !important;
+                align-items: flex-end !important;
+            }
+            .print-qrcode-img {
+                width: 48px !important;
+                height: 48px !important;
+                object-fit: contain !important;
+                background: #fff !important;
+                border: 1px solid #ccc !important;
+                border-radius: 4px !important;
+                box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important;
+                margin: 0 !important;
+            }
+        }
+        @media screen {
+            .print-qrcode-container {
+                display: none !important;
+            }
+        }
+
+        .timeboard-normal {
+            color: #1a5fb4;
+            font-weight: bold;
+        }
+        .timeboard-warning {
+            color: #e67e22;
+            font-weight: bold;
+        }
+        .timeboard-danger {
+            color: #c0392b;
+            font-weight: bold;
+        }
+        .timeboard-info {
+            color: #16a085;
+            font-weight: bold;
+        }
+        .timeboard-bold {
+            font-weight: bold;
+        }
+
+        
+        .side-nav {
+            position: fixed;
+            top: 50%;
+    left: calc(50vw - 400px - 200px + 130px);
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background: rgba(255,255,255,0.95);
+            border-radius: 0 8px 8px 0;
+            box-shadow: 1px 2px 8px rgba(0,0,0,0.08);
+            padding: 12px 8px 12px 4px;
+            z-index: 1200;
+            transition: background 0.2s;
+        }
+        .side-nav .nav-btn {
+            display: block;
+            color: #1a5fb4;
+            background: none;
+            border: none;
+            padding: 6px 18px 6px 10px;
+            margin: 0;
+            font-size: 15px;
+            border-radius: 4px;
+            text-align: left;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+        .side-nav .nav-btn:hover {
+            background: #eaf2fb;
+            color: #0d4a9e;
+        }
+        @media (max-width: 600px) {
+            
+            .side-nav {
+                top: 65%;
+                left: 186px;
+                transform: translateY(-50%);
+                padding: 6px 4px 6px 2px;
+                z-index: 1400;
+                background: rgba(255,255,255,0.98);
+            }
+            .side-nav .nav-btn {
+                font-size: 13px;
+                padding: 4px 10px 4px 6px;
+            }
+        }
+        @media print {
+            .side-nav {
+                display: none !important;
+            }
+        }
+        
+        .video-section {
+            margin-bottom: 30px;
+        }
+        .video-qr-container {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .video-qr-img {
+            width: 110px;
+            height: 110px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            background: #fff;
+            padding: 4px;
+            border-radius: 6px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .video-qr-caption {
+            font-size: 13px;
+            color: #555;
+            margin-top: 4px;
+        }
+        .video-link {
+            color: #1a5fb4;
+            text-decoration: underline;
+            word-break: break-all;
+        }
+    </style>
+
+    <script>
+    
+    (function(){
+        function applyTheme(isNight){
+            if(isNight) document.body.classList.add('night'); else document.body.classList.remove('night');
+            var btn = document.getElementById('theme-toggle');
+            if(btn){ btn.textContent = isNight ? '\uD83C\uDF19' : '\u2600\ufe0f'; btn.setAttribute('aria-pressed', isNight ? 'true' : 'false'); }
+        }
+
+        
+        try{
+            var pref = localStorage.getItem('themeMode');
+            if(pref === 'night') applyTheme(true);
+            else if(pref === 'day') applyTheme(false);
+        }catch(e){}
+
+        
+        document.addEventListener('click', function(e){
+            var t = e.target;
+            if(t && (t.id === 'theme-toggle' || t.closest && t.closest('#theme-toggle'))){
+                var isNight = document.body.classList.toggle('night');
+                try{ localStorage.setItem('themeMode', isNight ? 'night' : 'day'); }catch(e){}
+                applyTheme(isNight);
+            }
+        });
+
+        
+        document.addEventListener('keydown', function(e){
+            var active = document.activeElement;
+            if(active && active.id === 'theme-toggle' && (e.key === 'Enter' || e.key === ' ')){
+                e.preventDefault(); active.click();
+            }
+        });
+    })();
+    </script>
+</head>
+<body>
+    
+    <div class="header-screen">
+        <div class="timestamp" id="timestamp">2025年8月18日 20:58:58</div>
+        <div class="title" id="documentTitle">(2019)黔0103刑初821号阅卷问题清单</div>
+    </div>
+
+    
+    <button class="print-button" onclick="window.print()">打印</button>
+    
+    <button class="theme-toggle" id="theme-toggle" title="切换昼夜模式">☀️</button>
+    <style>
+    .theme-toggle {
+        position: fixed;
+        top: 60px;
+        left: 20px;
+        background-color: #1a5fb4;
+        color: white;
+        border: none;
+        padding: 6px 12px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 16px;
+        z-index: 1000;
+        transition: background 0.2s;
+    }
+    .theme-toggle:hover {
+        background-color: #0d4a9e;
+    }
+    @media print {
+        .theme-toggle {
+            display: none !important;
+        }
+    }
+    :root {
+        --background: #f0f2f5;
+        --text: #333;
+        --foreground: #fff;
+        --primary: #1a5fb4;
+        --button-hover: #0d4a9e;
+        --icon-hover: #eaf2fb;
+        --border-radius: 8px;
+    }
+    body.night {
+        --background: #23272e;
+        --text: #e0e0e0;
+        --foreground: #23272e;
+        --primary: #f7c873;
+        --button-hover: #e2a23a;
+        --icon-hover: #2d3642;
+    }
+    body.night {
+        background-color: var(--background) !important;
+        color: var(--text) !important;
+    }
+    body.night .content {
+        background: #23272e !important;
+        color: #e0e0e0 !important;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    }
+    body.night .side-nav {
+        background: #23272e !important;
+        color: #e0e0e0 !important;
+        box-shadow: 1px 2px 8px rgba(0,0,0,0.18);
+    }
+    body.night .side-nav .nav-btn {
+        color: #f7c873 !important;
+    }
+    body.night .side-nav .nav-btn:hover {
+        background: #2d3642 !important;
+        color: #fff !important;
+    }
+    body.night .print-button, body.night .theme-toggle {
+        background: #f7c873 !important;
+        color: #23272e !important;
+    }
+    body.night .print-button:hover, body.night .theme-toggle:hover {
+        background: #e2a23a !important;
+        color: #23272e !important;
+    }
+    </style>
+    
+    <style>
+    .read-nav{position:sticky;top:72px;display:flex;gap:10px;justify-content:center;align-items:center;padding:8px 12px;background:rgba(255,255,255,0.98);border-bottom:1px solid rgba(0,0,0,0.06);z-index:1100}
+    .read-link{display:inline-block;padding:6px 12px;border-radius:999px;background:linear-gradient(90deg,#1976d2 0%,#2196f3 100%);color:#fff;text-decoration:none;font-size:14px}
+    .read-link:hover{filter:brightness(0.95);transform:translateY(-1px)}
+    
+    @media (max-width:600px){
+        .read-nav{overflow-x:auto;padding:6px 8px;gap:8px;display:flex}
+        .read-link{white-space:nowrap;font-size:13px}
+    }
+
+    
+    @media (min-width:601px){
+        .read-nav{display:none}
+    }
+
+    
+    .top-float-nav{
+        position:fixed;
+        top:50%;
+    right:calc(50vw - 400px - 200px - 130px);
+        transform:translateY(-50%);
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+        background:rgba(255,255,255,0.95);
+    border-radius:8px 0 0 8px;
+        box-shadow:-1px 2px 8px rgba(0,0,0,0.08);
+        padding:12px 4px 12px 8px;
+        z-index:1200;
+        transition:background 0.2s;
+        /* 限制高度并启用滚动，确保大量内容可访问 */
+        max-height: calc(100vh - 160px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        /* 给右侧留出内边距以避免文字遮挡滚动条 */
+        padding-right: 6px;
+    }
+    .top-float-nav .nav-btn{
+        display:block;
+        color:#1a5fb4;
+        background:none;
+        border:none;
+    padding:6px 18px 6px 10px;
+        margin:0;
+        font-size:15px;
+        border-radius:4px;
+    text-align:left;
+        text-decoration:none;
+        transition:background 0.2s,color 0.2s;
+    }
+    .top-float-nav .nav-btn:hover{
+        background:#eaf2fb;
+        color:#0d4a9e;
+    }
+    @media (max-width:600px){
+        .top-float-nav{
+            top:65%;
+            right:-74px;
+            transform:translateY(-50%);
+            padding:6px 2px 6px 4px;
+            /* 在移动端也允许滚动查看全部项 */
+            max-height: calc(50vh);
+            overflow-y: auto;
+            z-index:1400;
+            background:rgba(255,255,255,0.98);
+        }
+        .top-float-nav .nav-btn{font-size:13px;padding:4px 10px 4px 6px}
+    }
+
+/* 自定义滚动条（WebKit / Blink）和 Firefox 兼容样式 */
+.top-float-nav::-webkit-scrollbar{ width:10px; }
+.top-float-nav::-webkit-scrollbar-track{ background: transparent; }
+.top-float-nav::-webkit-scrollbar-thumb{ background: rgba(25,95,180,0.15); border-radius:6px; }
+.top-float-nav::-webkit-scrollbar-thumb:hover{ background: rgba(25,95,180,0.28); }
+.top-float-nav{ scrollbar-width: thin; scrollbar-color: rgba(25,95,180,0.15) transparent; }
+    </style>
+    <div class="read-nav" role="navigation" aria-label="阅读导航">
+    <a class="read-link" href="#problemlist">问题清单</a>
+    <a class="read-link" href="#section-laws">援引法条</a>
+    <a class="read-link" href="#000200">起诉书</a>
+    <a class="read-link" href="#000400">量刑建议书</a>
+    <a class="read-link" href="#000500">换押证</a>
+    <a class="read-link" href="#000900">起诉书副本送达笔录</a>
+    <a class="read-link" href="#001100">指定辩护律师笔录</a>
+    <a class="read-link" href="#001500">对辩护律师的起诉书副本送达回证</a>
+    <a class="read-link" href="#001600">对公诉人周江红的出庭通知书送达回证</a>
+    <a class="read-link" href="#001700">开庭公告</a>
+    <a class="read-link" href="#001800">审判笔录</a>
+    <a class="read-link" href="#002400">王贵平的看守所入所健康档案</a>
+    <a class="read-link" href="#003400">王贵平的自书辩护词</a>
+    <a class="read-link" href="#004300">王贵平的刑事判决书</a>
+    <a class="read-link" href="#004600">一审宣判笔录</a>
+    <a class="read-link" href="#004700">一审判决书送达回证</a>
+    <a class="read-link" href="#004800">对公诉人周江红的一审判决书送达回证</a>
+    <a class="read-link" href="#004900">对辩护人的一审判决书送达回证</a>
+    <a class="read-link" href="#005000">2019年7月2日开庭提押票</a>
+    <a class="read-link" href="#005100">致中院的案卷移送函</a>
+    <a class="read-link" href="#0053600">（2019）黔01刑终667号刑事裁定书</a>
+    <a class="read-link" href="#005600">执行通知书回执</a>
+    <a class="read-link" href="#005700">执行通知书存根</a>
+    </div>
+
+    
+    <div class="content">
+        <h1 class="document-title" id="contentTitle">(2019)黔0103刑初821号阅卷问题清单</h1>
+
+        
+        <div class="section">
+            <div id="problemlist" class="section-title">一、问题清单</div>
+            <ol class="list-none pl-8 space-y-4">
+                <li>
+                    <strong>问题一：</strong>正卷卷宗资料不真实。具体表现为：所有卷宗资料的创建时间均为 2020 年 12 月 14 日至 15 日，但案件 2019 年 1 月 21 日至 2019 年 3 月 27 日属于侦查阶段，2019 年 3 月 27 日至 2019 年 6 月 12 日属于审查起诉阶段，2019 年 6 月 12 日至 2019 年 8 月 26 日属于审理审判阶段，各阶段对应的卷宗资料未在相应阶段形成，存在明显逻辑矛盾，该现象存在重大假案隐患。<br>
+                    <strong>法律依据：</strong>《最高人民法院关于全面推进人民法院电子卷宗随案同步生成和深度应用的指导意见》（法〔2016〕264 号）；《最高人民法院、国家档案局关于印发〈人民法院诉讼档案管理办法〉和〈人民法院电子诉讼档案管理暂行办法〉的通知》（法〔2013〕283 号）。
+                </li>
+                <li>
+                    <strong>问题二：</strong>缺少刑事拘留、逮捕通知书的送达凭证（包括邮政送达凭证及寄送单号），办案机关是否向嫌疑人亲属寄送通知书的情况不明确。但王贵平家属均确认截至目前从未收到该案的刑事拘留和逮捕通知书，同时办案方以该凭证及送达资料已完全移送法院，但法院以种种理由踢皮球并且该卷宗资料也未附卷供当事人王贵平查阅，这就表明法院的审判程序合法性存在严重问题。<br>
+                    <strong>法律依据：</strong>《中华人民共和国刑事诉讼法》第八十五条、第九十三条。
+                </li>
+                <li>
+                    <strong>问题三：</strong>缺少涉案证物信息（包括涉案 OPPO A5 手机的录像、照片、权属证明等信息），存在虚构事实诬告陷害的嫌疑。<br>
+                    <strong>法律依据：</strong>《最高人民法院、国家档案局关于印发〈人民法院诉讼档案管理办法〉和〈人民法院电子诉讼档案管理暂行办法〉的通知》（法〔2013〕283 号）。
+                </li>
+                <li>
+                    <strong>问题四：</strong>鉴定意见未附卷，存在虚构事实、诬告陷害的嫌疑。<br>
+                    <strong>法律依据：</strong>《最高人民法院、国家档案局关于印发〈人民法院诉讼档案管理办法〉和〈人民法院电子诉讼档案管理暂行办法〉的通知》（法〔2013〕283 号）。
+                </li>
+                <li>
+                    <strong>问题五：</strong>2025 年 9 月 2 日援引的《贵州省高级人民法院档案管理工作暂行规定》（黔高法〔2021〕69 号）相关摘文内容涉及公众利益，且与当事人阅卷权利相关联，因此不属于法院内部规定范畴；但在公开渠道无法查询到该文件，故该摘文存在被篡改的嫌疑。<br>
+                    <strong>法律依据：</strong>《司法公开的六项规定》（法发〔2009〕58 号）第五条；《中华人民共和国政府信息公开条例》（国务院令第 711 号）第十九条。
+                </li>
+                <li></li>
+            </ol>
+        </div>
+
+            <div class="section">
+            <div id="section-laws" class="section-title">二、援引法条：</div>
+                <ul class="list-disc pl-8 space-y-2">
+                    <li style="list-style-type: none;">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-2">
+                                <p>《中华人民共和国刑法》</p>
+                                <button type="button" class="toggle-law-btn focus:outline-none ml-2" aria-expanded="false">
+                                    <i class="fa fa-chevron-down text-primary transition-transform duration-200 align-middle"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col items-end ml-4">
+                                <a href="https://gat.sc.gov.cn/scgat/c108968/2024/10/15/6914533aa6954b4f9c780a340c418735.shtml" target="_blank" rel="noopener noreferrer" class="text-primary underline">官方原文</a>
+                            </div>
+                        </div>
+                        <div class="law-content mt-2 rounded-lg bg-purple-100 p-4 text-neutral-800 hidden">
+                            <p class="text-indent-2"><strong>第二百六十三条</strong>　　【抢劫罪】以暴力、胁迫或者其他方法抢劫公私财物的，处三年以上十年以下有期徒刑，并处罚金；有下列情形之一的，处十年以上有期徒刑、无期徒刑或者死刑，并处罚金或者没收财产：<br>（一）入户抢劫的；<br>（二）在公共交通工具上抢劫的；<br>（三）抢劫银行或者其他金融机构的；<br>（四）多次抢劫或者抢劫数额巨大的；<br>（五）抢劫致人重伤、死亡的；<br>（六）冒充军警人员抢劫的；<br>（七）持枪抢劫的；<br>（八）抢劫军用物资或者抢险、救灾、救济物资的。</p>
+                            <p class="text-indent-2"><strong>第二百三十四条</strong>　【故意伤害罪】故意伤害他人身体的，处三年以下有期徒刑、拘役或者管制。犯前款罪，致人重伤的，处三年以上十年以下有期徒刑；致人死亡或者以特别残忍手段致人重伤造成严重残疾的，处十年以上有期徒刑、无期徒刑或者死刑。本法另有规定的，依照规定。</p>
+                            <p class="text-indent-2"><strong>第二百三十四条之一</strong>　【组织出卖人体器官罪】组织他人出卖人体器官的，处五年以下有期徒刑，并处罚金；情节严重的，处五年以上有期徒刑，并处罚金或者没收财产。【故意伤害罪】【故意杀人罪】未经本人同意摘取其器官，或者摘取不满十八周岁的人的器官，或者强迫、欺骗他人捐献器官的，依照本法第二百三十四条、第二百三十二条的规定定罪处罚。【盗窃、侮辱、故意毁坏尸体、尸骨、骨灰罪】违背本人生前意愿摘取其尸体器官，或者本人生前未表示同意，违反国家规定，违背其近亲属意愿摘取其尸体器官的，依照本法第三百零二条的规定定罪处罚。</p>
+                            <p class="text-indent-2"><strong>第二百四十三条</strong>　【诬告陷害罪】捏造事实诬告陷害他人，意图使他人受刑事追究，情节严重的，处三年以下有期徒刑、拘役或者管制；造成严重后果的，处三年以上十年以下有期徒刑。国家机关工作人员犯前款罪的，从重处罚。不是有意诬陷，而是错告，或者检举失实的，不适用前两款的规定。</p>
+                            <p class="text-indent-2"><strong>第二百四十七条</strong>　【刑讯逼供罪】【暴力取证罪】司法工作人员对犯罪嫌疑人、被告人实行刑讯逼供或者使用暴力逼取证人证言的，处三年以下有期徒刑或者拘役。致人伤残、死亡的，依照本法第二百三十四条、第二百三十二条的规定定罪从重处罚。</p>
+                            <p class="text-indent-2"><strong>第三百零七条</strong>　【妨害作证罪】以暴力、威胁、贿买等方法阻止证人作证或者指使他人作伪证的，处三年以下有期徒刑或者拘役；情节严重的，处三年以上七年以下有期徒刑。【帮助毁灭、伪造证据罪】帮助当事人毁灭、伪造证据，情节严重的，处三年以下有期徒刑或者拘役。司法工作人员犯前两款罪的，从重处罚。</p>
+                            <p class="text-indent-2"><strong>第三百零七条之一</strong>　【虚假诉讼罪】以捏造的事实提起民事诉讼，妨害司法秩序或者严重侵害他人合法权益的，处三年以下有期徒刑、拘役或者管制，并处或者单处罚金；情节严重的，处三年以上七年以下有期徒刑，并处罚金。单位犯前款罪的，对单位判处罚金，并对其直接负责的主管人员和其他直接责任人员，依照前款的规定处罚。有第一款行为，非法占有他人财产或者逃避合法债务，又构成其他犯罪的，依照处罚较重的规定定罪从重处罚。司法工作人员利用职权，与他人共同实施前三款行为的，从重处罚；同时构成其他犯罪的，依照处罚较重的规定定罪从重处罚。</p>
+                            <p class="text-indent-2"><strong>第三百九十七条</strong>　【滥用职权罪】【玩忽职守罪】国家机关工作人员滥用职权或者玩忽职守，致使公共财产、国家和人民利益遭受重大损失的，处三年以下有期徒刑或者拘役；情节特别严重的，处三年以上七年以下有期徒刑。本法另有规定的，依照规定。国家机关工作人员徇私舞弊，犯前款罪的，处五年以下有期徒刑或者拘役；情节特别严重的，处五年以上十年以下有期徒刑。本法另有规定的，依照规定。</p>
+                        </div>
+                    </li>
+                    <li style="list-style-type: none;">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-2">
+                                <p>《中华人民共和国刑事诉讼法》</p>
+                                <button type="button" class="toggle-law-btn focus:outline-none ml-2" aria-expanded="false">
+                                    <i class="fa fa-chevron-down text-primary transition-transform duration-200 align-middle"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-row items-end ml-4 space-x-2">
+                                <a href="http://gongbao.court.gov.cn/Details/11aaa996a59f5824912be62d3dfa0d.html?sw=" target="_blank" rel="noopener noreferrer" class="text-primary underline">官方原文1</a>
+                                <a href="http://gongbao.court.gov.cn/Details/b772fbc86b46cdf2eddda464ef3325.html?sw=" target="_blank" rel="noopener noreferrer" class="text-primary underline">官方原文2</a>
+                            </div>
+                        </div>
+                        <div class="law-content mt-2 rounded-lg bg-purple-100 p-4 text-neutral-800 hidden">
+                            <p class="text-indent-2"><strong>第八十五条</strong> 公安机关拘留人的时候，必须出示拘留证。</p>
+                            <p class="text-indent-2">拘留后，应当立即将被拘留人送看守所羁押，至迟不得超过二十四小时。除无法通知或者涉嫌危害国家安全犯罪、恐怖活动犯罪通知可能有碍侦查的情形以外，应当在拘留后二十四小时以内，通知被拘留人的家属。有碍侦查的情形消失以后，应当立即通知被拘留人的家属。</p>
+                            <p class="text-indent-2"><strong>第九十三条</strong> 公安机关逮捕人的时候，必须出示逮捕证。</p>
+                            <p class="text-indent-2">逮捕后，应当立即将被逮捕人送看守所羁押。除无法通知的以外，应当在逮捕后二十四小时以内，通知被逮捕人的家属。</p>
+                        </div>
+                    </li>
+                    <li style="list-style-type: none;">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-2">
+                                <p>《最高人民法院关于适用<中华人民共和国刑事诉讼法>的解释》(法释〔2012〕21号)</p>
+                                <button type="button" class="toggle-law-btn focus:outline-none ml-2" aria-expanded="false">
+                                    <i class="fa fa-chevron-down text-primary transition-transform duration-200 align-middle"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-row items-end ml-4 space-x-2">
+                                <a href="https://www.court.gov.cn/fabu/xiangqing/4937.html" target="_blank" rel="noopener noreferrer" class="text-primary underline">官方原文</a>
+                            </div>
+                        </div>
+                        <div class="law-content mt-2 rounded-lg bg-purple-100 p-4 text-neutral-800 hidden">
+                            <p class="text-indent-2"><strong>第七十八条</strong>  证人当庭作出的证言，经控辩双方质证、法庭查证属实的，应当作为定案的根据。</p>
+                            <p class="text-indent-2">证人当庭作出的证言与其庭前证言矛盾，证人能够作出合理解释，并有相关证据印证的，应当采信其庭审证言；不能作出合理解释，而其庭前证言有相关证据印证的，可以采信其庭前证言。</p>
+                            <p class="text-indent-2">经人民法院通知，证人没有正当理由拒绝出庭或者出庭后拒绝作证，法庭对其证言的真实性无法确认的，该证人证言不得作为定案的根据。</p>
+                            <p class="text-indent-2"><strong>第九十条</strong> 对辨认笔录应当着重审查辨认的过程、方法，以及辨认笔录的制作是否符合有关规定。</p>
+                            <p class="text-indent-2">辨认笔录具有下列情形之一的，不得作为定案的根据：</p>
+                            <p class="text-indent-2">（一）辨认不是在侦查人员主持下进行的；</p>
+                            <p class="text-indent-2">（二）辨认前使辨认人见到辨认对象的；</p>
+                            <p class="text-indent-2">（三）辨认活动没有个别进行的；</p>
+                            <p class="text-indent-2">（四）辨认对象没有混杂在具有类似特征的其他对象中，或者供辨认的对象数量不符合规定的；</p>
+                            <p class="text-indent-2">（五）辨认中给辨认人明显暗示或者明显有指认嫌疑的；</p>
+                            <p class="text-indent-2">（六）违反有关规定、不能确定辨认笔录真实性的其他情形。</p>
+                            <p class="text-indent-2"><strong>第一百零四条</strong>对证据的真实性，应当综合全案证据进行审查。</p>
+                            <p class="text-indent-2">对证据的证明力，应当根据具体情况，从证据与待证事实的关联程度、证据之间的联系等方面进行审查判断。</p>
+                            <p class="text-indent-2">证据之间具有内在联系，共同指向同一待证事实，不存在无法排除的矛盾和无法解释的疑问的，才能作为定案的根据。</p>
+                            <p class="text-indent-2"></p>
+                            <p class="text-indent-2"></p>
+                            <p class="text-indent-2"></p>
+                        </div>
+                    </li>
+                    <li style="list-style-type: none;">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-2">
+                                <p>《公安机关办理刑事案件程序规定》（公安部令第127号）</p>
+                                <button type="button" class="toggle-law-btn focus:outline-none ml-2" aria-expanded="false">
+                                    <i class="fa fa-chevron-down text-primary transition-transform duration-200 align-middle"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col items-end ml-4">
+                                <a href="https://www.mps.gov.cn:8090/n6557558/c7684065/content.html" target="_blank" rel="noopener noreferrer" class="text-primary underline">官方原文</a>
+                            </div>
+                        </div>
+                        <div class="law-content mt-2 rounded-lg bg-purple-100 p-4 text-neutral-800 hidden">
+                            <p class="text-indent-2"><strong>第一百八十五条</strong>公安机关作出撤销案件决定后，应当在三日以内告知原犯罪嫌疑人、被害人或者其近亲属、法定代理人以及案件移送机关。</p>
+                            <p class="text-indent-2">公安机关作出终止侦查决定后，应当在三日以内告知原犯罪嫌疑人。</p>
+                            <p class="text-indent-2"><strong>第一百八十九条</strong> 公安机关侦查犯罪，应当严格依照法律规定的条件和程序采取强制措施和侦查措施，严禁在没有证据的情况下，仅凭怀疑就对犯罪嫌疑人采取强制措施和侦查措施。</p>
+                            <p class="text-indent-2"><strong>第二百零三条</strong> 讯问犯罪嫌疑人，在文字记录的同时，可以对讯问过程进行录音或者录像。对于可能判处无期徒刑、死刑的案件或者其他重大犯罪案件，应当对讯问过程进行录音或者录像。</p>
+                            <p class="text-indent-2">前款规定的"可能判处无期徒刑、死刑的案件"，是指应当适用的法定刑或者量刑档次包含无期徒刑、死刑的案件。"其他重大犯罪案件"，是指致人重伤、死亡的严重危害公共安全犯罪、严重侵犯公民人身权利犯罪，以及黑社会性质组织犯罪、严重毒品犯罪等重大故意犯罪案件。</p>
+                            <p class="text-indent-2">对讯问过程录音或者录像的，应当对每一次讯问全程不间断进行，保持完整性。不得选择性地录制，不得剪接、删改。</p>
+                            <p class="text-indent-2"><strong>第二百零八条</strong> 侦查人员对于与犯罪有关的场所、物品、人身、尸体应当进行勘验或者检查，及时提取、采集与案件有关的痕迹、物证、生物样本等。在必要的时候，可以指派或者聘请具有专门知识的人，在侦查人员的主持下进行勘验、检查。</p>
+                            <p class="text-indent-2"><strong>第二百四十三条</strong> 对鉴定意见，侦查人员应当进行审查。</p>
+                            <p class="text-indent-2">对经审查作为证据使用的鉴定意见，公安机关应当及时告知犯罪嫌疑人、被害人或者其法定代理人。</p>
+                            <p class="text-indent-2"><strong>第二百四十六条</strong> 经审查，发现有下列情形之一的，经县级以上公安机关负责人批准，应当重新鉴定：</p>
+                            <p class="text-indent-2">（一）鉴定程序违法或者违反相关专业技术要求的；</p>
+                            <p class="text-indent-2">（二）鉴定机构、鉴定人不具备鉴定资质和条件的;</p>
+                            <p class="text-indent-2">（三）鉴定人故意作虚假鉴定或者违反回避规定的；</p>
+                            <p class="text-indent-2">（四）鉴定意见依据明显不足的；</p>
+                            <p class="text-indent-2">（五）检材虚假或者被损坏的；</p>
+                            <p class="text-indent-2">（六）其他应当重新鉴定的情形。</p>
+                            <p class="text-indent-2">重新鉴定，应当另行指派或者聘请鉴定人。</p>
+                            <p class="text-indent-2">经审查，不符合上述情形的，经县级以上公安机关负责人批准，作出不准予重新鉴定的决定，并在作出决定后三日以内书面通知申请人。</p>
+                            <p class="text-indent-2"><strong>第二百四十七条</strong> 公诉人、当事人或者辩护人、诉讼代理人对鉴定意见有异议，经人民法院依法通知的，公安机关鉴定人应当出庭作证。</p>
+                            <p class="text-indent-2">鉴定人故意作虚假鉴定的，应当依法追究其法律责任。</p>
+                            <p class="text-indent-2"><strong>第二百七十七条</strong> 侦查终结后，应当将全部案卷材料按照要求装订立卷。</p>
+                            <p class="text-indent-2">向人民检察院移送案件时，只移送诉讼卷，侦查卷由公安机关存档备查。</p>
+                            <p class="text-indent-2"><strong>第二百七十九条</strong> 对侦查终结的案件，应当制作起诉意见书，经县级以上公安机关负责人批准后，连同全部案卷材料、证据，以及辩护律师提出的意见，一并移送同级人民检察院审查决定；同时将案件移送情况告知犯罪嫌疑人及其辩护律师。</p>
+                        </div>
+                    </li>
+                    <li style="list-style-type: none;">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-2">
+                                <p>《最高人民法院、最高人民检察院、公安部关于羁押犯罪嫌疑人、被告人实行换押和羁押期限变更通知制度的通知》（公监管〔2014〕96号）</p>
+                                <button type="button" class="toggle-law-btn focus:outline-none ml-2" aria-expanded="false">
+                                    <i class="fa fa-chevron-down text-primary transition-transform duration-200 align-middle"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col items-end ml-4">
+                                <a href="https://nt.jsjc.gov.cn/jianwu/guifan/201911/t20191126_931109.shtml" target="_blank" rel="noopener noreferrer" class="text-primary underline">官方原文</a>
+                            </div>
+                        </div>
+                        <div class="law-content mt-2 rounded-lg bg-purple-100 p-4 text-neutral-800 hidden">
+                            <p class="text-indent-2"><strong>一、换押和通知范围</strong></p>
+                            <p class="text-indent-2"><strong>（一）换押范围</strong></p>
+                            <p class="text-indent-2"><strong>　具有下列情形之一的，办案机关应当办理换押手续：</strong></p>
+                            <p class="text-indent-2">1、侦查机关侦查终结，移送人民检察院审查起诉的；</p>
+                            <p class="text-indent-2">2、人民检察院退回侦查机关补充侦查的，以及侦查机关补充侦查完毕后重新移送人民检察院审查起诉的；</p>
+                            <p class="text-indent-2"><strong>　四、超期羁押责任</strong></p>
+                            <p class="text-indent-2">凡不按照上述规定办理换押手续和羁押期限变更通知手续，造成超期羁押的，应当依照法律和有关规定追究办案机关有关负责人员的纪律责任或者法律责任。</p>
+                        </div>
+                    </li>
+                    <li style="list-style-type: none;">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-2">
+                                <p>《最高人民法院关于全面推进人民法院电子卷宗随案同步生成和深度应用的指导意见》(法〔2016〕264号)</p>
+                                <button type="button" class="toggle-law-btn focus:outline-none ml-2" aria-expanded="false">
+                                    <i class="fa fa-chevron-down text-primary transition-transform duration-200 align-middle"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col items-end ml-4">
+                                <a href="https://www.court.gov.cn/fabu/xiangqing/37402.html" target="_blank" rel="noopener noreferrer" class="text-primary underline">官方原文</a>
+                            </div>
+                        </div>
+                        <div class="law-content mt-2 rounded-lg bg-purple-100 p-4 text-neutral-800 hidden">
+                            <p class="text-indent-2">二、电子卷宗随案同步生成的基本要求</p>
+                            <p class="text-indent-2">（一）电子卷宗内容。电子卷宗包含法院在案件受理时接收或办理过程中形成的电子文档、图像、音频、视频等电子文件，以及将纸质案卷材料依托数字影像、文字识别等技术制作而成的电子文档、数据等电子文件。</p>
+                            <p class="text-indent-2">（二）电子文件制作。电子文件包含由检察院、法院、当事人、律师、第三方机构等通过信息化系统提供的电子文档、电子证据、电子音视频材料等。案件纸质卷宗要按照《人民法院电子诉讼档案管理暂行办法》（法〔2013〕283号）的质量及格式要求制作电子文件。</p>
+                            <p class="text-indent-2">（三）电子文件收集。各类电子文件可通过诉讼服务平台上传、扫描设备输入、业务系统流转等方式，收集到办案平台中。要保证电子卷宗收集的同步性和及时性，在接收纸质诉讼材料后尽快完成电子化，保障后续审判环节能够及时使用电子卷宗。电子卷宗管理系统应实现电子卷宗的自动排版和归类。涉及国家秘密的案件卷宗应在涉密办案系统中生成和应用。</p>
+                            <p class="text-indent-2">（四）电子卷宗存储和保管。各高级人民法院可根据本院辖区应用系统、网络和硬件建设情况，自行决定本辖区电子卷宗集中或分布存储方式。应采取及时存储、异地备份等安全保障方式，保证电子卷宗存储的安全性。</p>
+                            <p class="text-indent-2">（五）电子卷宗审查和监管。要对个人和其他单位提供的电子材料进行审查，对本院电子卷宗的质量进行监管，避免出现遗漏、错误和延误，审查和监管的内容包括数据完整度、图像文件清晰度、数据挂接准确度以及生成及时性等。</p>
+                        </div>
+                    <li style="list-style-type: none;">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-2">
+                                <p>《信访工作条例》</p>
+                                <button type="button" class="toggle-law-btn focus:outline-none ml-2" aria-expanded="false">
+                                    <i class="fa fa-chevron-down text-primary transition-transform duration-200 align-middle"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col items-end ml-4">
+                                <a href="https://www.gov.cn/zhengce/2022-04/07/content_5683923.htm" target="_blank" class="text-primary underline">官方原文</a>
+                            </div>
+                        </div>
+                        <div class="law-content mt-2 rounded-lg bg-purple-100 p-4 text-neutral-800 hidden">
+                            <p class="text-indent-2"><strong>第二十二条</strong> 各级党委和政府信访部门收到信访事项，应当予以登记，并区分情况，在15日内分别按照下列方式处理：</p>
+                            <p class="text-indent-2">（一）对依照职责属于本级机关、单位或者其工作部门处理决定的，应当转送有权处理的机关、单位；情况重大、紧急的，应当及时提出建议，报请本级党委和政府决定。</p>
+                            <p class="text-indent-2">（二）涉及下级机关、单位或者其工作人员的，按照"属地管理、分级负责，谁主管、谁负责"的原则，转送有权处理的机关、单位。</p>
+                            <p class="text-indent-2">（三）对转送信访事项中的重要情况需要反馈办理结果的，可以交由有权处理的机关、单位办理，要求其在指定办理期限内反馈结果，提交办结报告。</p>
+                            <p class="text-indent-2">各级党委和政府信访部门对收到的涉法涉诉信件，应当转送同级政法部门依法处理；对走访反映涉诉问题的信访人，应当释法明理，引导其向有关政法部门反映问题。对属于纪检监察机关受理的检举控告类信访事项，应当按照管理权限转送有关纪检监察机关依规依纪依法处理。</p>
+                            <p class="text-indent-2"><strong>第二十三条</strong> 党委和政府信访部门以外的其他机关、单位收到信访人直接提出的信访事项，应当予以登记；对属于本机关、单位职权范围的，应当告知信访人接收情况以及处理途径和程序；对属于本系统下级机关、单位职权范围的，应当转送、交办有权处理的机关、单位，并告知信访人转送、交办去向；对不属于本机关、单位或者本系统职权范围的，应当告知信访人向有权处理的机关、单位提出。</p>
+                            <p class="text-indent-2">对信访人直接提出的信访事项，有关机关、单位能够当场告知的，应当当场书面告知；不能当场告知的，应当自收到信访事项之日起15日内书面告知信访人，但信访人的姓名（名称）、住址不清的除外。</p>
+                            <p class="text-indent-2">对党委和政府信访部门或者本系统上级机关、单位转送、交办的信访事项，属于本机关、单位职权范围的，有关机关、单位应当自收到之日起15日内书面告知信访人接收情况以及处理途径和程序；不属于本机关、单位或者本系统职权范围的，有关机关、单位应当自收到之日起5个工作日内提出异议，并详细说明理由，经转送、交办的信访部门或者上级机关、单位核实同意后，交还相关材料。</p>
+                            <p class="text-indent-2">政法部门处理涉及诉讼权利救济事项、纪检监察机关处理检举控告事项的告知按照有关规定执行。</p>
+                            <p class="text-indent-2"><strong>第三十九条</strong> 各级党委和政府应当以依规依法及时就地解决信访问题为导向，每年对信访工作情况进行考核。考核结果应当在适当范围内通报，并作为对领导班子和有关领导干部综合考核评价的重要参考。</p>
+                            <p class="text-indent-2">对在信访工作中作出突出成绩和贡献的机关、单位或者个人，可以按照有关规定给予表彰和奖励。</p>
+                            <p class="text-indent-2">对在信访工作中履职不力、存在严重问题的领导班子和领导干部，视情节轻重，由信访工作联席会议进行约谈、通报、挂牌督办，责令限期整改。</p>
+                            <p class="text-indent-2"><strong>第四十二条</strong> 因下列情形之一导致信访事项发生，造成严重后果的，对直接负责的主管人员和其他直接责任人员，依规依纪依法严肃处理；构成犯罪的，依法追究刑事责任：</p>
+                            <p class="text-indent-2">（一）超越或者滥用职权，侵害公民、法人或者其他组织合法权益；</p>
+                            <p class="text-indent-2">（二）应当作为而不作为，侵害公民、法人或者其他组织合法权益；</p>
+                            <p class="text-indent-2">（三）适用法律、法规错误或者违反法定程序，侵害公民、法人或者其他组织合法权益；</p>
+                            <p class="text-indent-2">（四）拒不执行有权处理机关、单位作出的支持信访请求意见。</p>
+                            <p class="text-indent-2"><strong>第四十四条</strong> 负有受理信访事项职责的机关、单位有下列情形之一的，由其上级机关、单位责令改正；造成严重后果的，对直接负责的主管人员和其他直接责任人员依规依纪依法严肃处理：</p>
+                            <p class="text-indent-2">（一）对收到的信访事项不按照规定登记；</p>
+                            <p class="text-indent-2">（二）对属于其职权范围的信访事项不予受理；</p>
+                            <p class="text-indent-2">（三）未在规定期限内书面告知信访人是否受理信访事项。</p>
+                            <p class="text-indent-2"><strong>第四十五条</strong> 对信访事项有权处理的机关、单位有下列情形之一的，由其上级机关、单位责令改正；造成严重后果的，对直接负责的主管人员和其他直接责任人员依规依纪依法严肃处理：</p>
+                            <p class="text-indent-2">（一）推诿、敷衍、拖延信访事项办理或者未在规定期限内办结信访事项；</p>
+                            <p class="text-indent-2">（二）对事实清楚，符合法律、法规、规章或者其他有关规定的投诉请求未予支持；</p>
+                            <p class="text-indent-2">（三）对党委和政府信访部门提出的改进工作、完善政策等建议重视不够、落实不力，导致问题长期得不到解决；</p>
+                            <p class="text-indent-2">（四）其他不履行或者不正确履行信访事项处理职责的情形。</p>
+                        </div>
+                    </li>
+                    <li style="list-style-type: none;">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-2">
+                                <p>《中华人民共和国政府信息公开条例》（国务院令第　711　号）</p>
+                                <button type="button" class="toggle-law-btn focus:outline-none ml-2" aria-expanded="false">
+                                    <i class="fa fa-chevron-down text-primary transition-transform duration-200 align-middle"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col items-end ml-4">
+                                <a href="https://www.gov.cn/gongbao/content/2019/content_5386612.htm" target="_blank" rel="noopener noreferrer" class="text-primary underline">官方原文</a>
+                            </div>
+                        </div>
+                        <div class="law-content mt-2 rounded-lg bg-purple-100 p-4 text-neutral-800 hidden">
+                            <p class="text-indent-2"><strong>第二十七条</strong> 　除行政机关主动公开的政府信息外，公民、法人或者其他组织可以向地方各级人民政府、对外以自己名义履行行政管理职能的县级以上人民政府部门（含本条例第十条第二款规定的派出机构、内设机构）申请获取相关政府信息。</p>
+                            <p class="text-indent-2"><strong>第二十八条</strong> 本条例第二十七条规定的行政机关应当建立完善政府信息公开申请渠道，为申请人依法申请获取政府信息提供便利。</p>
+                            <p class="text-indent-2"><strong>第二十九条</strong> 公民、法人或者其他组织申请获取政府信息的，应当向行政机关的政府信息公开工作机构提出，并采用包括信件、数据电文在内的书面形式；采用书面形式确有困难的，申请人可以口头提出，由受理该申请的政府信息公开工作机构代为填写政府信息公开申请。</p>
+                            <p class="text-indent-2">政府信息公开申请应当包括下列内容：</p>
+                            <p class="text-indent-2">（一）申请人的姓名或者名称、身份证明、联系方式；</p>
+                            <p class="text-indent-2">（二）申请公开的政府信息的名称、文号或者便于行政机关查询的其他特征性描述；</p>
+                            <p class="text-indent-2">（三）申请公开的政府信息的形式要求，包括获取信息的方式、途径。</p>
+                            <p class="text-indent-2"><strong>第三十条</strong> 政府信息公开申请内容不明确的，行政机关应当给予指导和释明，并自收到申请之日起7个工作日内一次性告知申请人作出补正，说明需要补正的事项和合理的补正期限。答复期限自行政机关收到补正的申请之日起计算。申请人无正当理由逾期不补正的，视为放弃申请，行政机关不再处理该政府信息公开申请。</p>
+                            <p class="text-indent-2"><strong>第三十一条</strong> 行政机关收到政府信息公开申请的时间，按照下列规定确定：</p>
+                            <p class="text-indent-2">（一）申请人当面提交政府信息公开申请的，以提交之日为收到申请之日；</p>
+                            <p class="text-indent-2">（二）申请人以邮寄方式提交政府信息公开申请的，以行政机关签收之日为收到申请之日；以平常信函等无需签收的邮寄方式提交政府信息公开申请的，政府信息公开工作机构应当于收到申请的当日与申请人确认，确认之日为收到申请之日；</p>
+                            <p class="text-indent-2">（三）申请人通过互联网渠道或者政府信息公开工作机构的传真提交政府信息公开申请的，以双方确认之日为收到申请之日。</p>
+                            <p class="text-indent-2"><strong>第三十二条</strong> 依申请公开的政府信息公开会损害第三方合法权益的，行政机关应当书面征求第三方的意见。第三方应当自收到征求意见书之日起15个工作日内提出意见。第三方逾期未提出意见的，由行政机关依照本条例的规定决定是否公开。第三方不同意公开且有合理理由的，行政机关不予公开。行政机关认为不公开可能对公共利益造成重大影响的，可以决定予以公开，并将决定公开的政府信息内容和理由书面告知第三方。</p>
+                            <p class="text-indent-2"><strong>第三十三条</strong> 行政机关收到政府信息公开申请，能够当场答复的，应当当场予以答复。</p>
+                            <p class="text-indent-2">行政机关不能当场答复的，应当自收到申请之日起20个工作日内予以答复；需要延长答复期限的，应当经政府信息公开工作机构负责人同意并告知申请人，延长的期限最长不得超过20个工作日。</p>
+                            <p class="text-indent-2">行政机关征求第三方和其他机关意见所需时间不计算在前款规定的期限内。</p>
+                            <p class="text-indent-2"><strong>第三十四条</strong> 申请公开的政府信息由两个以上行政机关共同制作的，牵头制作的行政机关收到政府信息公开申请后可以征求相关行政机关的意见，被征求意见机关应当自收到征求意见书之日起15个工作日内提出意见，逾期未提出意见的视为同意公开。</p>
+                            <p class="text-indent-2"><strong>第三十五条</strong> 申请人申请公开政府信息的数量、频次明显超过合理范围，行政机关可以要求申请人说明理由。行政机关认为申请理由不合理的，告知申请人不予处理；行政机关认为申请理由合理，但是无法在本条例第三十三条规定的期限内答复申请人的，可以确定延迟答复的合理期限并告知申请人。</p>
+                            <p class="text-indent-2"><strong>第三十六条</strong> 对政府信息公开申请，行政机关根据下列情况分别作出答复：</p>
+                            <p class="text-indent-2">（一）所申请公开信息已经主动公开的，告知申请人获取该政府信息的方式、途径；</p>
+                            <p class="text-indent-2">（二）所申请公开信息可以公开的，向申请人提供该政府信息，或者告知申请人获取该政府信息的方式、途径和时间；</p>
+                            <p class="text-indent-2">（三）行政机关依据本条例的规定决定不予公开的，告知申请人不予公开并说明理由；</p>
+                            <p class="text-indent-2">（四）经检索没有所申请公开信息的，告知申请人该政府信息不存在；</p>
+                            <p class="text-indent-2">（五）所申请公开信息不属于本行政机关负责公开的，告知申请人并说明理由；能够确定负责公开该政府信息的行政机关的，告知申请人该行政机关的名称、联系方式；</p>
+                            <p class="text-indent-2">（六）行政机关已就申请人提出的政府信息公开申请作出答复、申请人重复申请公开相同政府信息的，告知申请人不予重复处理；</p>
+                            <p class="text-indent-2">（七）所申请公开信息属于工商、不动产登记资料等信息，有关法律、行政法规对信息的获取有特别规定的，告知申请人依照有关法律、行政法规的规定办理。</p>
+                            <p class="text-indent-2"><strong>第三十七条</strong> 申请公开的信息中含有不应当公开或者不属于政府信息的内容，但是能够作区分处理的，行政机关应当向申请人提供可以公开的政府信息内容，并对不予公开的内容说明理由。</p>
+                            <p class="text-indent-2"><strong>第三十八条</strong> 行政机关向申请人提供的信息，应当是已制作或者获取的政府信息。除依照本条例第三十七条的规定能够作区分处理的外，需要行政机关对现有政府信息进行加工、分析的，行政机关可以不予提供。</p>
+                            <p class="text-indent-2"><strong>第三十九条</strong> 申请人以政府信息公开申请的形式进行信访、投诉、举报等活动，行政机关应当告知申请人不作为政府信息公开申请处理并可以告知通过相应渠道提出。</p>
+                            <p class="text-indent-2">申请人提出的申请内容为要求行政机关提供政府公报、报刊、书籍等公开出版物的，行政机关可以告知获取的途径。</p>
+                            <p class="text-indent-2"><strong>第四十条</strong> 行政机关依申请公开政府信息，应当根据申请人的要求及行政机关保存政府信息的实际情况，确定提供政府信息的具体形式；按照申请人要求的形式提供政府信息，可能危及政府信息载体安全或者公开成本过高的，可以通过电子数据以及其他适当形式提供，或者安排申请人查阅、抄录相关政府信息。</p>
+                            <p class="text-indent-2"><strong>第四十一条</strong> 公民、法人或者其他组织有证据证明行政机关提供的与其自身相关的政府信息记录不准确的，可以要求行政机关更正。有权更正的行政机关审核属实的，应当予以更正并告知申请人；不属于本行政机关职能范围的，行政机关可以转送有权更正的行政机关处理并告知申请人，或者告知申请人向有权更正的行政机关提出。</p>
+                            <p class="text-indent-2"><strong>第四十二条</strong> 行政机关依申请提供政府信息，不收取费用。但是，申请人申请公开政府信息的数量、频次明显超过合理范围的，行政机关可以收取信息处理费。</p>
+                            <p class="text-indent-2">行政机关收取信息处理费的具体办法由国务院价格主管部门会同国务院财政部门、全国政府信息公开工作主管部门制定。</p>
+                            <p class="text-indent-2"><strong>第四十三条</strong> 申请公开政府信息的公民存在阅读困难或者视听障碍的，行政机关应当为其提供必要的帮助。</p>
+                            <p class="text-indent-2"><strong>第四十四条</strong> 多个申请人就相同政府信息向同一行政机关提出公开申请，且该政府信息属于可以公开的，行政机关可以纳入主动公开的范围。</p>
+                            <p class="text-indent-2">对行政机关依申请公开的政府信息，申请人认为涉及公众利益调整、需要公众广泛知晓或者需要公众参与决策的，可以建议行政机关将该信息纳入主动公开的范围。行政机关经审核认为属于主动公开范围的，应当及时主动公开。</p>
+                            <p class="text-indent-2"><strong>第四十五条</strong> 行政机关应当建立健全政府信息公开申请登记、审核、办理、答复、归档的工作制度，加强工作规范。</p>
+                            <p class="text-indent-2">***</p>
+                        </div>
+                    </li>
+                    <li style="list-style-type: none;">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-2">
+                                <p>《公安机关现场执法视音频记录工作规定》（公通字〔2016〕14号）</p>
+                                <button type="button" class="toggle-law-btn focus:outline-none ml-2" aria-expanded="false">
+                                    <i class="fa fa-chevron-down text-primary transition-transform duration-200 align-middle"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col items-end ml-4">
+                                <a href="https://www.xiangshan.gov.cn/art/2020/1/21/art_1229682852_4092176.html" target="_blank" rel="noopener noreferrer" class="text-primary underline">官方原文</a>
+                            </div>
+                        </div>
+                        <div class="law-content mt-2 rounded-lg bg-purple-100 p-4 text-neutral-800 hidden">
+                            <p class="text-indent-2"><strong>第六条</strong> 开展现场执法视音频记录时，应当对执法过程进行全程不间断记录，自到达现场开展执法活动时开始，至执法活动结束时停止；从现场带回违法犯罪嫌疑人的，应当记录至将违法犯罪嫌疑人带入公安机关执法办案场所办案区时停止。</p>
+                            <p class="text-indent-2"><strong>第七条</strong> 现场执法视音频记录应当重点摄录以下内容：</p>
+                            <p class="text-indent-2">（一）执法现场环境；</p>
+                            <p class="text-indent-2">（二）违法犯罪嫌疑人、被害人、被侵害人和证人等现场人员的体貌特征和言行举止；</p>
+                            <p class="text-indent-2">（三）重要涉案物品及其主要特征，以及其他可以证明违法犯罪行为的证据；</p>
+                            <p class="text-indent-2">（四）执法人员现场开具、送达法律文书和对有关人员、财物采取措施情况；</p>
+                            <p class="text-indent-2">（五）其他应当记录的重要内容。</p>
+                            <p class="text-indent-2"><strong>第八条</strong> 现场执法视音频记录过程中，因设备故障、损坏，天气情况恶劣或者电量、存储空间不足等客观原因而中止记录的，重新开始记录时应当对中断原因进行语音说明。确实无法继续记录的，应当立即向所属部门负责人报告，并在事后书面说明情况。</p>
+                            <p class="text-indent-2"><strong>第十三条</strong> 现场执法视音频资料的保存期限原则上应当不少于六个月。</p>
+                            <p class="text-indent-2">对于记录以下情形的现场执法视音频资料，应当永久保存：</p>
+                            <p class="text-indent-2">（一）作为行政、刑事案件证据使用的；</p>
+                            <p class="text-indent-2">（二）当事人或者现场其他人员有阻碍执法、妨害公务行为的；</p>
+                            <p class="text-indent-2">（三）处置重大突发事件、群体性事件的；</p>
+                            <p class="text-indent-2">（四）其他重大、疑难、复杂的警情。</p>
+                        </div>
+                    </li>
+                    <li style="list-style-type: none;">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-2">
+                                <p>《最高人民法院、国家档案局关于印发<人民法院诉讼档案管理办法>和<人民法院电子诉讼档案管理暂行办法>的通知》（法〔2013〕283号）</p>
+                                <button type="button" class="toggle-law-btn focus:outline-none ml-2" aria-expanded="false">
+                                    <i class="fa fa-chevron-down text-primary transition-transform duration-200 align-middle"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col items-end ml-4">
+                                <a href="https://www.faxin.cn/lib/Zyfl/ZylfSimple.aspx?gid=A289188&libid=all" target="_blank" rel="noopener noreferrer" class="text-primary underline">官方原文</a>
+                            </div>
+                        </div>
+                        <div class="law-content mt-2 rounded-lg bg-purple-100 p-4 text-neutral-800 hidden">
+                            <p class="text-indent-2"><strong>《人民法院诉讼档案管理办法》（法〔2013〕283号）</strong></p>
+                            <p class="text-indent-2"><strong>第十六条</strong>案件当事人持身份证或者其他有效身份证明(当事人是法人的，应持法定代表人身份证明、工商登记证明复印件)，可以查阅诉讼档案正卷有关内容。</p>
+                            <p class="text-indent-2">律师持执业证、律师事务所介绍信、当事人授权委托书、当事人身份证明复印件，可以查阅诉讼档案正卷有关内容。</p>
+                            <p class="text-indent-2"><strong>第十七条</strong>当事人或者诉讼代理人可以申请复制所查阅的档案材料。经批准复制的材料，由档案工作人员核对无误后，加盖人民法院档案证明专用章，与档案原件具有同等的效力。</p>
+                            <p class="text-indent-2"><strong>《人民法院诉讼文书材料立卷规范》（法〔2013〕283号）</strong></p>
+                            <p class="text-indent-2"><strong></strong>第八条</strong>　诉讼文书正卷材料：</p>
+                            <p class="text-indent-2">(1)立案审批表；(2)起诉状、上诉状、抗诉书、案件移送函等表明案件来源的材料；(3)原审人民法院裁判文书；(4)受理通知书、应诉通知书及送达回证或者其他送达凭证；(5)答辩状及送达回证或者其他送达凭证；(6)诉讼费收取手续；(7)送卷函、调卷函；(8)当事人身份证明、授权委托书；(9)调查、询问、讯问笔录、调查取证材料；(10)当事人提供的证据材料；(11)诉前保全、财产保全材料；(12)司法鉴定材料；(13)传票、提押票；(14)开庭通知、公告、庭审笔录；(15)代理词、辩护词、被告人陈述词；(16)延长审理期限审批表；(17)撤诉书；(18)判决书、裁定书、调解书、决定书、司法建议书和其他法律文书正本及送达回证或者其他送达凭证；(19)宣判公告、宣判笔录、委托宣判函；(20)死刑执行命令；(21)物证处理材料；(22)妨碍诉讼的强制措施材料；(23)民事、行政执行材料；(24)案件移送函存根、退卷函、退卷函存根、上级人民法院裁判文书正本；(25)其他诉讼文书材料。</p>
+                            <p class="text-indent-2"><strong>第九条</strong>　诉讼文书副卷材料：</p>
+                            <p class="text-indent-2">(1)阅卷笔录；(2)案件审理报告；(3)合议庭评议案件笔录；(4)审判委员会讨论案件记录；(5)延长审理期限的申请及批示材料；(6)判决书、裁定书、调解书、决定书、司法建议书和其他法律文书原本；(7)执行死刑照片和其他执行死刑材料；(8)其他不宜对外公开的材料。</p>
+                            <p class="text-indent-2"></p>
+                        </div>
+                    </li>
+                    <li style="list-style-type: none;">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-2">
+                                <p>《人民法院档案工作规定》（法发〔2012〕11号）</p>
+                                <button type="button" class="toggle-law-btn focus:outline-none ml-2" aria-expanded="false">
+                                    <i class="fa fa-chevron-down text-primary transition-transform duration-200 align-middle"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col items-end ml-4">
+                                <a href="http://www.jxzycourt.gov.cn/public/detail.php?id=165" target="_blank" rel="noopener noreferrer" class="text-primary underline">官方原文</a>
+                            </div>
+                        </div>
+                        <div class="law-content mt-2 rounded-lg bg-purple-100 p-4 text-neutral-800 hidden">
+                            <p class="text-indent-2"><strong>第十五条</strong>  人民法院各部门在审判工作和其他工作中形成的属于归档范围的各种形式和载体的文件材料，均应在规定期限内向本院档案机构移交归档，并保证齐全完整。任何个人或者部门不得据为己有或者拒绝归档。</p>
+                            <p class="text-indent-2"><strong>第十六条</strong>  人民法院档案机构应当严格按照归档要求检查验收归档文件。对不符合归档要求的，提出意见，退回归档部门重新整理并限期归档。</p>
+                        </div>
+                    </li>
+                    <li style="list-style-type: none;">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-2">
+                                <p>《关于司法公开的六项规定》（法发〔2009〕58号）</p>
+                                <button type="button" class="toggle-law-btn focus:outline-none ml-2" aria-expanded="false">
+                                    <i class="fa fa-chevron-down text-primary transition-transform duration-200 align-middle"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col items-end ml-4">
+                                <a href="http://gongbao.court.gov.cn/Details/499b5ab43edeecf1ae5e67b36bf561.html?sw=" target="_blank" rel="noopener noreferrer" class="text-primary underline">官方原文</a>
+                            </div>
+                        </div>
+                        <div class="law-content mt-2 rounded-lg bg-purple-100 p-4 text-neutral-800 hidden">
+                            <p class="text-indent-2"><strong>第五条、文书公开</strong></p>
+                            <p class="text-indent-2">裁判文书应当充分表述当事人的诉辩意见、证据的采信理由、事实的认定、适用法律的推理与解释过程，做到说理公开。人民法院可以根据法制宣传、法学研究、案例指导、统一裁判标准的需要，集中编印、刊登各类裁判文书。除涉及国家秘密、未成年人犯罪、个人隐私以及其他不适宜公开的案件和调解结案的案件外，人民法院的裁判文书可以在互联网上公开发布。当事人对于在互联网上公开裁判文书提出异议并有正当理由的，人民法院可以决定不在互联网上发布。为保护裁判文书所涉及到的公民、法人和其他组织的正当权利，可以对拟公开发布的裁判文书中的相关信息进行必要的技术处理。人民法院应当注意收集社会各界对裁判文书的意见和建议，作为改进工作的参考。</p>
+                        </div>
+                    </li>
+                    <li style="list-style-type: none;">
+                        <div class="flex items-start justify-between">
+                            <div class="flex items-center space-x-2">
+                                <p>《最高人民法院关于人民法院庭审录音录像的若干规定》（法释〔2017〕5号）</p>
+                                <button type="button" class="toggle-law-btn focus:outline-none ml-2" aria-expanded="false">
+                                    <i class="fa fa-chevron-down text-primary transition-transform duration-200 align-middle"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col items-end ml-4">
+                                <a href="https://www.court.gov.cn/fabu/xiangqing/36562.html?_refluxos=a10" target="_blank" rel="noopener noreferrer" class="text-primary underline">官方原文</a>
+                            </div>
+                        </div>
+                        <div class="law-content mt-2 rounded-lg bg-purple-100 p-4 text-neutral-800 hidden">
+                            <p class="text-indent-2"><strong>第十条</strong>人民法院应当通过审判流程信息公开平台、诉讼服务平台以及其他便民诉讼服务平台，为当事人、辩护律师、诉讼代理人等依法查阅庭审录音录像提供便利。</p>
+                            <p class="text-indent-2">对提供查阅的录音录像，人民法院应当设置必要的安全防范措施。</p>
+                        </div>
+                    </li>
+                </ul>
+        <div class="section">
+            <div id="report" class="section-title">三、阅卷报告</div>
+            <ol class="list-none pl-8 space-y-4">
+                <li id="000200"><strong>000200-起诉书正本</strong></li>
+                <p><strong>问题：</strong>此页为起诉书第1页。存在问题是：“底部无与起诉书第2页右下角相同的防伪条码，导致此页资料的制作或形成时间无法追溯，并且其最终形成时间为2020年12月14日  15:15:54 ，明显没有与实体形成时间不匹配，严重违反规定。另外，存在内容被篡改嫌疑。并且2019年7月2日在一审庭审中回应称案件无退侦，与此页记载的存在退侦情况矛盾，因此需出具庭审当日的同步录音录像给予佐证周江红当日的回答，而且存在该庭审过程同步录音录像未在庭审公开网公开，存在隐匿、篡改隐患；还有该起诉书未依规定在12309公开，这为篡改起诉书第1页，即有退侦情况提供了操作空间。最后加盖法院电子证明章后该卷宗资料形成时间为2025年9月1日  09:48:23，严重违反相关规定”。另据《公安机关办理刑事案件程序规定》（公安部令第127号）第二百七十九条规定，如有退侦情况嫌疑人王贵平因收到公安机关的案件移送告知，然而事实没有，并且正卷也无退侦相关文书和资料附卷。</p>
+                <p><strong>依据：</strong>《最高人民法院关于全面推进人民法院电子卷宗随案同步生成和深度应用的指导意见》(法〔2016〕264号)、《最高人民法院关于人民法院庭审录音录像的若干规定》（法释〔2017〕5号）第十条、《法律文书公开指南》（https://www.12309.gov.cn/12309/bszn/201902/t20190227_410407.shtml）第三条第（一）项、六条、第七条，《最高人民法院、国家档案局关于印发<人民法院诉讼档案管理办法>和<人民法院电子诉讼档案管理暂行办法>的通知》（法〔2013〕283号）、《公安机关刑事案卷立卷规范（2014版）》（公法〔2014〕1080号）《公安机关办理刑事案件程序规定》（公安部令第127号）第二百七十九条规定,即“同时将案件移送情况告知犯罪嫌疑人”</p>
+                <p><strong>特别提醒：</strong>据公法〔2014〕1080号规定，“刑事案卷分为诉讼卷（又称正卷）和侦查工作卷（又称副卷）两大部分。诉讼卷主要包括对外使用的法律文书和证明案件事实的证据材料，组装后随案移送人民检察院，供诉讼使用。侦查工作卷主要包括不对外发生法律效力的内部审批文书、案件研究记录以及有保存价值但不需作为刑事诉讼证据使用的其他材料，装订后存档备查。”，“作为证据使用的，应当将有关法律文书和证据材料归入诉讼卷随案移送，必要时单独立卷，标注密级；不作为证据使用的，归入侦查工作卷，不随案移送；与案件无关的材料必须及时销毁。”</p>
+                <p><strong>结论：</strong>该起诉书第1页存在有退侦情况，与庭审过程中公诉人周江红无退侦的回答存在矛盾，存在起诉书第1页被篡改的重点嫌疑，该情况本可通过庭审视频得到证实，但一审法院未将该庭审视频依规定公开，这为篡改起诉书中有退侦部分的内容提供了操作空间，并且该起诉书在判决生效也未依《《法律文书公开指南》第三条第（一）项、六条、第七条规定公开，保障其内容的真实，且第1页右下角无防伪条码供追溯，进一步加大其被篡改的可能。因此相关方有必要对该情况予以正式书面答复和回应。</p>
+                <p><strong>相关方处理进展：</strong>等待中</p>
+                <li><strong>000300-起诉书正本</strong></li>
+                <p><strong>问题：</strong>此页为起诉书第2页。列举了认定案件事实的证据有：1.书证：受案登记表、立案决定书、户籍证明、被害人黄某某的病历、扣押及发还清单等；2.证人证言：证人林某某的证言；3.被害人陈述：被害人黄某某的陈述；4.被告人的供述和辩解：被告人王贵平的供述和辩解;5.鉴定意见：涉案物品估价鉴定结论书；6.辨认笔录：被害人黄辨认笔录，案发现场指认笔录。还交代了案卷材料和证据2册，光盘2张。然而从法院提供的正卷资料并未体现以上材料内容。从贵阳市云岩区档案提供的正卷材料看，缺失材料有：1、书证（受案登记表、立案决定书、被害人黄某某的病历、扣押及发还清单等）；2、证人证言（证人林某某的证言、被害人陈述、被害人黄某某的陈述、被告人的供述和辩解、）；3、鉴定意见（涉案物品估价鉴定结论书）；4、辨认笔录（被害人黄辨认笔录，案发现场指认笔录）。法院提供的正卷材料内容具体为:1、电子版起诉书副本（编号分别为 000200～000300）；2、电子版量刑建议书（编号为 000400）；3、换押证（000500～000800）；4、送达起诉书副本笔录（000900～001000）；5、电子版委托（指定）辩护律师辩护笔录（编号为 001100）；6、电子版指定辩护人通知书（编号为 001200）；7、电子版法律援助公函（编号为 001300）；8、电子版法律援助律师的执业证书（编号为 001400）；9、电子版法律援助律师的起诉书副本送达回证（编号为 001500）；10、电子版对公诉人周江红的出庭通知书送达回证（编号为 001600）；11、电子版开庭公告（编号为 001700）；12、电子版刑事审判笔录（编号为 001800～002300）；13、嫌疑人在看守所的电子版入所健康档案（编号为 002400～003300）；14、嫌疑人王贵平的电子版自书辩护词（编号为 003400～004200）；15、电子版（2019）黔 0103 刑初 821 号刑事判决书（编号为 004300～004500）；16、电子版一审宣判笔录（编号为 004600）；17、对嫌疑人王贵平的电子版（2019）黔 0103 刑初 821 号刑事判决书送达回证（编号为 004700）；18、公诉人周江红的电子版（2019）黔 0103 刑初 821 号刑事判决书送达回证（编号为 004800）；19、对辩护律师的电子版（2019）黔 0103 刑初 821 号刑事判决书送达回证（编号为 004900），并且签收人不是辩护律师许涛；20、电子版（2019）黔 01 刑终 667 号刑事裁定书（编号为 005300～005500）。</p>
+                <p>这与起诉书记录移送卷宗资料严重不符，并且王贵平的只有3页的辩护词被重复归档导致其编号从003400一直到004200，明显重复，违反《最高人民法院、国家档案局关于印发<人民法院诉讼档案管理办法>和<人民法院电子诉讼档案管理暂行办法>的通知》（法〔2013〕283号）规定。</p>
+                <p><strong>依据：</strong>《最高人民法院、国家档案局关于印发〈人民法院诉讼档案管理办法〉和〈人民法院电子诉讼档案管理暂行办法〉的通知》（法〔2013〕283 号）</p>
+                <p>《人民法院诉讼文书材料立卷规范》（法〔2013〕283号）第八条　诉讼文书正卷材料：</p>
+                <p>(1)立案审批表；(2)起诉状、上诉状、抗诉书、案件移送函等表明案件来源的材料；(3)原审人民法院裁判文书；(4)受理通知书、应诉通知书及送达回证或者其他送达凭证；(5)答辩状及送达回证或者其他送达凭证；(6)诉讼费收取手续；(7)送卷函、调卷函；(8)当事人身份证明、授权委托书；(9)调查、询问、讯问笔录、调查取证材料；(10)当事人提供的证据材料；(11)诉前保全、财产保全材料；(12)司法鉴定材料；(13)传票、提押票；(14)开庭通知、公告、庭审笔录；(15)代理词、辩护词、被告人陈述词；(16)延长审理期限审批表；(17)撤诉书；(18)判决书、裁定书、调解书、决定书、司法建议书和其他法律文书正本及送达回证或者其他送达凭证；(19)宣判公告、宣判笔录、委托宣判函；(20)死刑执行命令；(21)物证处理材料；(22)妨碍诉讼的强制措施材料；(23)民事、行政执行材料；(24)案件移送函存根、退卷函、退卷函存根、上级人民法院裁判文书正本；(25)其他诉讼文书材料。</p>
+                <p><strong>结论：</strong>法院的正卷缺失众多关键材料，最核心的是没有涉案证物OPPO A5手机的任何信息（包括照片、录像、鉴定意见等），很明显是一个虚假案件。没有证人证言、讯问笔录、讯问笔录等关键证据资料，并且这些资料是对外发生法律关系的，依规定应在正卷得以体现。因此相关方有必要对该情况予以正式书面答复和回应。</p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="000400"><strong>000400-量刑建议书</strong></li>
+                <p><strong>问题：</strong>此页为云检公诉量建〔2019〕2940号量刑建议书，落款日期为2019年6月11日。从落款日期看，明显超出法定审查起诉期，并且按2019年3月27日案件进入审查起诉阶段，并且无退侦或延期审查情形，另外正卷卷宗无延期或退侦材料附卷也印证了案件无退侦或延期情况。即2019年4月27日必须进入法院审理审判阶段，因此落款日期明显超期。并且该量刑建议书是2019年6月14日与换押证、起诉书一并送至看守所要求王贵平签收，但遭王贵平拒签、拒收。</p>
+                <p><strong>依据：</strong>《中华人民共和国刑事诉讼法》第一百七十二条、《公安机关办理刑事案件程序规定》（公安部令第127号）第二百七十九条、《人民法院诉讼文书材料立卷规范》（法〔2013〕283号）第八条。</p>
+                <p><strong>结论：</strong>案件无退侦或延期，量刑建议书超期送达，程序严重违法，并且在2024年12月12日公诉人周江红与王贵平通话时，一味将问题归咎与王贵平拒签、拒收，对案件超期起诉问题无任何解释。必须对相关司法责任人依法严惩。</p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="000500"><strong>000500-换押证</strong></li>
+                <li><strong>000600-换押证</strong></li>
+                <li><strong>000700-换押证</strong></li>
+                <li><strong>000800-换押证</strong></li>
+                <p><strong>问题：</strong>以上四份换押证分别是检察机关与审判机关的换押证，前两份换押证号为云检公诉换字〔2019〕4347号,归档编号分别是000500、000600；后两份是云换字[2019]821号换押证，是贵阳市云岩区人民法院与贵阳市中级人民法院之间的换押，归档编号分别是000700、000800。问题在于这几份换押证均无检察院或法院填发人签字，离奇的是没有公安机关签发的换押证。而且是在2019年6月14日一次性给王贵平签发，导致其拒签、拒收。如果王贵平稀里糊涂签了，那么后面相关人员肯定也会签字，这样似乎程序就“合法化”了。但现在换押证都没人签字，即无人负责，说明程序存在违法问题。因此，相关方需正式书面答复和回应。</p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong>换押程序无人签字，无责任人，更严重的是缺失公安机关的换押证。因此，有必要依《最高人民法院、最高人民检察院、公安部关于羁押犯罪嫌疑人、被告人实行换押和羁押期限变更通知制度的通知》（公监管〔2014〕96号）对相关责任人追责问责。</p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="000900"><strong>000900-送达起诉书副本笔录</strong></li>
+                <li><strong>001000-送达起诉书副本笔录</strong></li>
+                <p><strong>问题：</strong>2019年3月27日，贵阳市云岩区人民检察院工作人员到看守所第一次提讯王贵平，因指控罪名是抢劫罪，导致王贵平拒绝任何形式的签字。到2019年4月3日该检察院工作人员第二次提讯王贵平，王贵平陈述案件经过后，对方在提讯材料上注明王贵平不是抢劫后，王贵平才签字，但该材料最后未被法院归档入正卷，问题很明显。2019年4月3日至2019年6月14日王贵平在看守所一直未收到任何机关的音讯，案件进展情况一无所知。根据《中华人民共和国刑事诉讼法》第一百七十二条，如有延期审查，王贵平应当收到检察机关的延期告知文书；如案件存在退回补充侦查，根据《公安机关办理刑事案件程序规定》（公安部令第127号）第二百三十九条，王贵平应收到案件移送情况，并且涉及检验机关与公安机关的管辖变更，应有一次换押记录，但事实却没有记录。并且法院正卷资料也无该退回补充侦查的换押材料。所以事实证明审查起诉阶段存在超期起诉的违法情形。</p>
+                <p>直到2019年6月14日，贵阳市云岩区人民法院书记员马晓捷一次性到看守所给王贵平一次性签发起诉书、量刑建议书、多份换押证遭王贵平拒签、拒收。并且马晓捷也未采取留置送达措施。并且在2019年7月2日的审判笔录中还虚构王贵平在开庭十日前已收到起诉书副本，故意作虚假记录，枉法办案。</p>
+                <p><strong>依据：</strong>中华人民共和国刑事诉讼法》第一百七十二条、《公安机关办理刑事案件程序规定》（公安部令第127号）第二百三十九条、《人民法院诉讼文书材料立卷规范》（法〔2013〕283号）第八条。《最高人民法院、最高人民检察院、公安部关于羁押犯罪嫌疑人、被告人实行换押和羁押期限变更通知制度的通知》（公监管〔2014〕96号）</p>
+                <p><strong>结论：</strong>司法工作人员枉法办案，程序严重违法，存在超期起诉，和故意作虚假记录的不法行为。相关司法工作人员应被依法严惩。</p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="001100"><strong>001100-送达起诉书副本笔录</strong></li>
+                <li><strong>001200-法律援助公函</strong></li>
+                <li><strong>001300-法律援助公函</strong></li>
+                <li><strong>001400-法律援助公函</strong></li>
+                <p><strong>问题：</strong>此3页卷宗材料主要是涉及委托法律援助律师的情况，王贵平第一次会见法律援助律师是在2019年6月28日，并且是在临近开庭前，在这么急促的时间里律师要做到充分阅卷是很难的，并且显示中该法律援助律师也不可能把所有精力花费在一个案件上。会见当天律师建议王贵平认罪争取从宽处理，因此王贵平拒绝其提供辩护词，并表示自行书写辩护词。</p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong>法律在临近开庭前才给王贵平委派辩护律师，导致律师未充分了解案件情况的前提下，对王贵平的案件产生了极为不利的后果，致使辩护效果不佳，甚至基于主观臆断对案件趋势进行评估，唐突让王贵平认罪从宽，致使王贵平的辩护权未获充分保障。</p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="001500"><strong>001500-送达回证</strong></li>
+                <p><strong>问题：</strong>此页是对辩护律师的起诉书送达回证，该回执没有辩护律师签字，没有载明起诉书副本送达时间，也没有任何单位印章，完全是打印体。所以该文书完全可以仿冒，其真实性存在严重问题，目的疑似掩盖未及时指派法律援助的问题。</p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong></p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="001600"><strong>001600-出庭通知书</strong></li>
+                <p><strong>问题：</strong>此页为对周江红的出庭通知书，整个正卷材料只有一份给公诉人的出庭通知书，问题非常明显。根据《最高人民法院关于适用<中华人民共和国刑事诉讼法>的解释》(法释〔2012〕21号)第七十八条、第七十九条、第八十六条、第八十八条规定 ，被害人、证人、鉴定人、勘验人，无法定事由需出庭</p>
+                <p><strong>依据：</strong>《最高人民法院关于适用<中华人民共和国刑事诉讼法>的解释》(法释〔2012〕21号)第七十八条、第七十九条、第八十六条、第八十八条</p>
+                <p><strong>结论：</strong>只有一份给公诉人的出庭通知书、而且无被害人、证人、鉴定人、勘验人的出庭通知书，很明显就是暗箱操作。实际开庭时无被害人、证人、鉴定人、勘验人出庭。所以相关方需对此作正式书面答复和回应。</p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="001700"><strong>001700-公告</strong></li>
+                <p><strong>结论：</strong>开庭公告无问题。</p>
+                <li id="001800"><strong>001800-刑事庭审笔录</strong></li>
+                <li><strong>001900-刑事庭审笔录</strong></li>
+                <p><strong>问题：</strong>审判笔录编号为001900中记录王贵平已在开庭十日前收到起诉书副本，与001000-送达起诉书副本笔录相互矛盾，因此该审判笔录存在明显虚构事实，作虚假记录的枉法行为。因为在2019年6月14日王贵平因被指控罪名与事实不符且存在超期起诉问题，拒签、拒收起诉书，直接印证该审判笔录存在故意造假，枉法办案等情况。</p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong></p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li><strong>002000-刑事庭审笔录</strong></li>
+                <li><strong>002100-刑事庭审笔录</strong></li>
+                <li><strong>002200-刑事庭审笔录</strong></li>
+                <li><strong>002300-刑事庭审笔录</strong></li>
+                <li id="002400"><strong>002400-相关证据材料</strong></li>
+                <li><strong>002500-相关证据材料</strong></li>
+                <li><strong>002600-相关证据材料</strong></li>
+                <li><strong>002700-相关证据材料</strong></li>
+                <li><strong>002800-相关证据材料</strong></li>
+                <li><strong>002900-相关证据材料</strong></li>
+                <li><strong>003000-相关证据材料</strong></li>
+                <li><strong>003100-相关证据材料</strong></li>
+                <li><strong>003200-相关证据材料</strong></li>
+                <li><strong>003300-相关证据材料</strong></li>
+                <p><strong>问题：</strong>从002400～003300共10页是王贵平在看守所的健康档案，其中002400，即健康档案封面记录了王贵平2019年1月21日22时50分被送达看守所，据案发时间2019年1月20日18时30分王贵平被采取强制措施明显超24小时，存在超期送羁问题；另外</p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong></p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="003400"><strong>003400-相关证据材料</strong></li>
+                <li><strong>003500-相关证据材料</strong></li>
+                <li><strong>003600-相关证据材料</strong></li>
+                <li><strong>003700-相关证据材料</strong></li>
+                <li><strong>003800-相关证据材料</strong></li>
+                <li><strong>003900-相关证据材料</strong></li>
+                <li><strong>004000-相关证据材料</strong></li>
+                <li><strong>004100-相关证据材料</strong></li>
+                <li><strong>004200-相关证据材料</strong></li>
+                <p><strong>问题：</strong></p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong></p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="004300"><strong>004300-刑事判决书</strong></li>
+                <li><strong>004400-刑事判决书</strong></li>
+                <li><strong>004500-刑事判决书</strong></li>
+                <p><strong>问题：</strong></p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong></p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="004600"><strong>004600-宣判笔录及送达回证</strong></li>
+                <p><strong>问题：</strong></p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong></p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="004700"><strong>004700-宣判笔录及送达回证</strong></li>
+                <p><strong>问题：</strong></p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong></p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="004800"><strong>004800-宣判笔录及送达回证</strong></li>
+                <p><strong>问题：</strong></p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong></p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="004900"><strong>004900-宣判笔录及送达回证</strong></li>
+                <p><strong>问题：</strong></p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong></p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="005000"><strong>005000-提押票</strong></li>
+                <p><strong>问题：</strong></p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong></p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="005100"><strong>005100-上诉移送函（稿）及退卷函</strong></li>
+                <p><strong>问题：</strong></p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong></p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="005300"><strong>005300-刑事裁定书</strong></li>
+                <li><strong>005400-刑事裁定书</strong></li>
+                <li><strong>005500-刑事裁定书</strong></li>
+                <p><strong>问题：</strong></p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong></p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="005600"><strong>005600-执行通知书存根及回执</strong></li>
+                <p><strong>问题：</strong></p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong></p>
+                <p><strong>相关方处理进展：</strong></p>
+                <li id="005700"><strong>005700-执行通知书存根及回执</strong></li>
+                <p><strong>问题：</strong></p>
+                <p><strong>依据：</strong></p>
+                <p><strong>结论：</strong></p>
+                <p><strong>相关方处理进展：</strong></p>
+            </ol>
+        </div>
+        <script>
+                    
+                    document.addEventListener('DOMContentLoaded', function () {
+                        document.querySelectorAll('.toggle-law-btn').forEach(function (btn) {
+                            btn.addEventListener('click', function () {
+                                const content = btn.closest('li').querySelector('.law-content');
+                                const icon = btn.querySelector('i');
+                                const expanded = btn.getAttribute('aria-expanded') === 'true';
+                                if (expanded) {
+                                    content.classList.add('hidden');
+                                    icon.classList.remove('fa-chevron-up');
+                                    icon.classList.add('fa-chevron-down');
+                                    btn.setAttribute('aria-expanded', 'false');
+                                } else {
+                                    content.classList.remove('hidden');
+                                    icon.classList.remove('fa-chevron-down');
+                                    icon.classList.add('fa-chevron-up');
+                                    btn.setAttribute('aria-expanded', 'true');
+                                }
+                            });
+                        });
+                    });
+                </script>
+            </div>
+
+                <div style="text-align: right;">
+                    <div style="margin-bottom: 8px;">
+                        <span>姓名：</span>
+                        <span style="display: inline-block; border-bottom: 1px solid #333; width: 140px; vertical-align: middle;">王&nbsp;&nbsp;&nbsp;贵&nbsp;&nbsp;&nbsp;平</span>
+                    </div>
+                    <div>
+                        <span>日期：</span>
+                        <span style="display: inline-block; border-bottom: 1px solid #333; width: 140px; vertical-align: bottom;">
+                            2025年9月4日
+                        </span>
+                    </div>
+                </div>
+
+        
+    <div class="footer-screen">
+        <div class="source-path" id="sourcePath">来源：</div>
+    </div>
+
+        <nav class="side-nav" id="nav">
+            <a href="index.html" class="nav-btn">主页</a>
+        </nav>
+        
+        <nav class="top-float-nav" id="top-nav" aria-label="页面导航（右侧）">
+            <a href="#problemlist" class="nav-btn">问题清单</a>
+            <a href="#section-laws" class="nav-btn">援引法条</a>
+            <a href="#report" class="nav-btn">阅卷报告</a>
+            <a href="#000200" class="nav-btn">起诉书</a>
+            <a href="#000400" class="nav-btn">量刑建议书</a>
+            <a href="#000500" class="nav-btn">换押证</a>
+            <a href="#000900" class="nav-btn">起诉书副本送达笔录</a>
+            <a href="#001100" class="nav-btn">指定辩护律师相关文书</a>
+            <a href="#001500" class="nav-btn">对辩护律师的起诉书副本送达回证</a>
+            <a href="#001600" class="nav-btn">对公诉人周江红的出庭通知书送达回证</a>
+            <a href="#001700" class="nav-btn">开庭公告</a>
+            <a href="#001800" class="nav-btn">审判笔录</a>
+            <a href="#002400" class="nav-btn">王贵平的看守所入所健康档案</a>
+            <a href="#003400" class="nav-btn">王贵平的自书辩护词</a>
+            <a href="#004300" class="nav-btn">王贵平的刑事判决书</a>
+            <a href="#004600" class="nav-btn">一审宣判笔录</a>
+            <a href="#004700" class="nav-btn">一审判决书送达回证</a>
+            <a href="#004800" class="nav-btn">对公诉人周江红的一审判决书送达回证</a>
+            <a href="#004900" class="nav-btn">对辩护人的一审判决书送达回证</a>
+            <a href="#005000" class="nav-btn">2019年7月2日开庭提押票</a>
+            <a href="#005100" class="nav-btn">致中院的案卷移送函</a>
+            <a href="#005300" class="nav-btn">（2019）黔01刑终667号刑事裁定书</a>
+            <a href="#005600" class="nav-btn">执行通知书回执</a>
+            <a href="#005700" class="nav-btn">执行通知书存根</a>
+            <a href="#sourcePath" class="nav-btn">来源</a>
+        </nav>
+<style>
+.side-dropdown { position: relative; }
+.side-dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  min-width: 110px;
+  background: #fff;
+  box-shadow: 1px 2px 8px rgba(0,0,0,0.08);
+  border-radius: 4px;
+  z-index: 1300;
+  padding: 4px 0;
+}
+.side-dropdown-item {
+  display: block;
+  padding: 6px 18px 6px 10px;
+  color: #1a5fb4;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+  border-radius: 0;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.side-dropdown-item:hover {
+  background: #eaf2fb;
+  color: #0d4a9e;
+}
+.side-dropdown:hover .side-dropdown-menu,
+.side-dropdown:focus-within .side-dropdown-menu {
+  display: block;
+}
+@media (max-width: 600px) {
+  .side-dropdown-menu {
+    left: 90%;
+    min-width: 90px;
+  }
+  .side-dropdown-item {
+    font-size: 13px;
+    padding: 4px 10px 4px 6px;
+  }
+}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var dropdowns = document.querySelectorAll('.side-dropdown');
+  dropdowns.forEach(function(dropdown) {
+    dropdown.addEventListener('mouseleave', function() {
+      dropdown.querySelector('.side-dropdown-menu').style.display = 'none';
+    });
+    dropdown.addEventListener('mouseenter', function() {
+      dropdown.querySelector('.side-dropdown-menu').style.display = 'block';
+    });
+        var toggle = dropdown.querySelector('.side-dropdown-toggle');
+        if (toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                var menu = dropdown.querySelector('.side-dropdown-menu');
+                if (menu) menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+            });
+        }
+
+        document.addEventListener('click', function(e) {
+            if (!dropdown.contains(e.target)) {
+                var m = dropdown.querySelector('.side-dropdown-menu');
+                if (m) m.style.display = 'none';
+            }
+        });
+    });
+
+    
+    function formatNow() {
+        var d = new Date();
+        function pad(n){return n<10?('0'+n):n}
+        return d.getFullYear() + '年' + (d.getMonth()+1) + '月' + d.getDate() + '日  ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
+    }
+
+    function safeForCssContent(s){
+        if(!s) return '';
+        
+        return s.replace(/\\/g,'\\\\').replace(/"/g,'\\"').replace(/\r?\n/g,' ');
+    }
+
+    function initPrintAndMeta(){
+        
+        var tsEl = document.getElementById('timestamp');
+        if(tsEl){
+            tsEl.textContent = formatNow();
+            setInterval(function(){ tsEl.textContent = formatNow(); }, 1000);
+        }
+
+        
+        var srcEl = document.getElementById('sourcePath');
+        var href = (typeof location !== 'undefined') ? location.href : '';
+        if(srcEl){ srcEl.textContent = '来源：' + href; }
+
+        
+        var existing = document.getElementById('print-styles');
+        if(existing) existing.parentNode.removeChild(existing);
+        var style = document.createElement('style');
+        style.id = 'print-styles';
+    var ts = formatNow();
+    var rawTitle = (document.getElementById('documentTitle') && document.getElementById('documentTitle').textContent) || document.title || '';
+    var safeTitle = safeForCssContent(rawTitle);
+    var safePath = safeForCssContent(href);
+                style.textContent = `@media print {
+    @page {
+        
+        @top-left { content: "${ts}"; font-size:13px; vertical-align: bottom; padding-bottom:5px; border-bottom:1px solid #ccc; color:#333; }
+        @top-right { content: "${safeTitle}"; font-size:15px; font-weight:700; vertical-align: bottom; padding-bottom:5px; border-bottom:1px solid #ccc; color:#111; }
+        
+        @bottom-left { content: "来源：${safePath}"; font-size:12px; vertical-align: top; padding-top:5px; border-top:1px solid #ccc; color:#333; }
+        @bottom-right { content: "第" counter(page) "页 共" counter(pages) "页"; font-size:12px; vertical-align: top; padding-top:5px; border-top:1px solid #ccc; color:#333; }
+    }
+}`;
+        document.head.appendChild(style);
+    }
+
+        
+        initPrintAndMeta();
+    });
+</script>
+<script>
+    
+document.addEventListener('DOMContentLoaded', function() {
+    var topNav = document.getElementById('top-nav');
+    if (!topNav) return;
+
+    
+    topNav.querySelectorAll('.nav-btn').forEach(function(btn){
+        btn.addEventListener('focus', function(){ btn.classList.add('focused'); });
+        btn.addEventListener('blur', function(){ btn.classList.remove('focused'); });
+        
+        btn.addEventListener('mouseenter', function(){ btn.style.background='#eaf2fb'; btn.style.color='#0d4a9e'; });
+        btn.addEventListener('mouseleave', function(){ btn.style.background=''; btn.style.color=''; });
+    });
+});
+</script>
+    <script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var topNav = document.getElementById('top-nav');
+        if (!topNav) return;
+
+        
+        function scrollToWithOffset(target) {
+            if (!target) return;
+            var header = document.querySelector('.header-screen');
+            var headerHeight = header ? header.offsetHeight : 80;
+            var extra = 12;
+            var top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - extra;
+            window.scrollTo({ top: top, behavior: 'smooth' });
+            
+            var origBg = target.style.backgroundColor;
+            target.style.transition = 'background-color 0.4s ease';
+            target.style.backgroundColor = '#fff8d6';
+            setTimeout(function(){ target.style.backgroundColor = origBg || ''; }, 900);
+            target.setAttribute('tabindex', '-1');
+            try { target.focus({ preventScroll: true }); } catch(e) { target.focus(); }
+        }
+
+        topNav.querySelectorAll('a.nav-btn[href^="#"]').forEach(function(link){
+            link.addEventListener('click', function(e){
+                e.preventDefault();
+                var targetId = link.getAttribute('href').slice(1);
+                var target = document.getElementById(targetId);
+                if (!target) return;
+                scrollToWithOffset(target);
+            });
+        });
+
+        
+        document.querySelectorAll('.read-link[href^="#"]').forEach(function(link){
+            link.addEventListener('click', function(e){
+                e.preventDefault();
+                var id = link.getAttribute('href').slice(1);
+                var t = document.getElementById(id);
+                if (!t) return;
+                scrollToWithOffset(t);
+            });
+        });
+    });
+    </script>
+    <script>
+        
+        function updateTimestamp() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth() + 1;
+            const day = now.getDate();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            document.getElementById('timestamp').textContent =
+                `${year}年${month}月${day}日 ${hours}:${minutes}:${seconds}`;
+        }
+
+        
+        (function() {
+          var now = new Date();
+          var y = now.getFullYear();
+          var m = (now.getMonth() + 1).toString().padStart(2, '0');
+          var d = now.getDate().toString().padStart(2, '0');
+          document.getElementById('date-calc-base').textContent = `${y}年${m}月${d}日`;
+        })();
+
+        
+        function setSourcePath() {
+            const fullUrl = window.location.href;
+            document.getElementById('sourcePath').textContent = `来源：${fullUrl}`;
+            return fullUrl;
+        }
+
+        
+        function setDocumentTitle() {
+            const title = "(2019)黔0103刑初821号阅卷问题清单";
+            document.getElementById('documentTitle').textContent = title;
+            document.getElementById('contentTitle').textContent = title;
+            return title;
+        }
+
+        
+        const timeBoardEvents = [
+            {
+                label: "刑事拘留通知书法定至迟送达日期为2019年1月22日，",
+                date: "2019-01-22",
+                type: "拘留"
+            },
+            {
+                label: "逮捕通知书法定至迟送达日期为2019年1月30日，",
+                date: "2019-01-30",
+                type: "逮捕"
+            }
+        ];
+
+        
+        function renderTimeBoard() {
+            const timeBoard = document.getElementById('timeBoard');
+            if (!timeBoard) return;
+
+            
+            const now = new Date();
+            
+            const bjOffset = 8 * 60; 
+            const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+            const bjDate = new Date(utc + bjOffset * 60000);
+
+            
+            const y = bjDate.getFullYear();
+            const m = bjDate.getMonth() + 1;
+            const d = bjDate.getDate();
+            let html = `<p>截至${y}年${m}月${d}日，王贵平家属依然没有收到本案王贵平的《刑事拘留通知书》和《逮捕通知书》，存在以下明显违法点：</p>`;
+
+            
+            let calcY, calcM, calcD;
+            const calcBase = document.getElementById('date-calc-base');
+            if (calcBase && calcBase.textContent.match(/(\d{4})年(\d{2})月(\d{2})日/)) {
+                const match = calcBase.textContent.match(/(\d{4})年(\d{2})月(\d{2})日/);
+                calcY = match[1];
+                calcM = match[2];
+                calcD = match[3];
+            } else {
+                
+                calcY = y.toString();
+                calcM = m.toString().padStart(2, '0');
+                calcD = d.toString().padStart(2, '0');
+            }
+
+            timeBoardEvents.forEach((event, idx) => {
+                const eventDate = new Date(event.date + "T00:00:00+08:00");
+                
+                const today = new Date(`${calcY}-${calcM}-${calcD}T00:00:00+08:00`);
+                const diff = Math.ceil((today - eventDate) / (1000 * 60 * 60 * 24)); 
+                let status = "";
+                let colorClass = "";
+                let desc = "";
+                let overdue = 0;
+
+                if (diff < 0) {
+                    
+                    const days = Math.abs(diff);
+                    if (days === 1) {
+                        status = "日程正常";
+                        colorClass = "timeboard-normal";
+                        desc = `还有<span class="timeboard-bold">${days}</span>天，<span class="${colorClass}">${status}</span>`;
+                    } else if (days <= 3) {
+                        status = "日程紧张";
+                        colorClass = "timeboard-warning";
+                        desc = `还有<span class="timeboard-bold">${days}</span>天，<span class="${colorClass}">${status}</span>`;
+                    } else {
+                        status = "日程宽裕";
+                        colorClass = "timeboard-info";
+                        desc = `还有<span class="timeboard-bold">${days}</span>天，<span class="${colorClass}">${status}</span>`;
+                    }
+                } else if (diff === 0) {
+                    status = "今日截止";
+                    colorClass = "timeboard-warning";
+                    desc = `今天截止，<span class="${colorClass}">${status}</span>`;
+                } else {
+                    
+                    overdue = diff;
+                    if(event.type==="拘留"){
+                        status = "未确认是否已向家属实际送达《刑事拘留通知书》";
+                    }else{
+                        status = "是否已向家属实际送达《逮捕通知书》尚未明确";
+                    }
+                    colorClass = "timeboard-danger";
+                    desc = `已过<span class="timeboard-bold">${overdue}</span>天，<span class="${colorClass}">${status}</span>`;
+                }
+
+                html += `<p>${idx + 1}、${event.label}${desc}</p>`;
+            });
+
+            timeBoard.innerHTML = html;
+        }
+
+        
+        function init() {
+            updateTimestamp();
+            renderTimeBoard();
+            const path = setSourcePath().replace('jwx%E9%98%B2%E4%BC%AA%E6%A0%87%E8%AF%86.png', 'jsqsr.png');
+            const title = setDocumentTitle();
+
+            
+            let qr = document.getElementById('print-qrcode');
+            if (!qr) {
+                qr = document.createElement('div');
+                qr.id = 'print-qrcode';
+                qr.className = 'print-qrcode-container';
+                qr.innerHTML = `
+                    <img class="print-qrcode-img" 
+                         src="favicon.ico/icoQR_code_jsqrs.png" 
+                         onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AkEEjQhJzVWJgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADElEQVQ4y2NgGAWjYBSMglEwCkbBKBgFowAAADgKARnQ9v4AAAAASUVORK5CYII='"
+                         alt="二维码">
+                `;
+                document.body.appendChild(qr);
+            }
+
+            setInterval(() => {
+                updateTimestamp();
+                renderTimeBoard();
+            }, 1000);
+            setupPrintStyles(title, path);
+
+            
+            const topNav = document.getElementById('top-nav');
+            if (topNav) {
+                
+                topNav.style.display = '';
+            }
+
+            
+            var themeToggleBtn = document.getElementById('theme-toggle');
+            function updateThemeIcon(el) {
+                
+                if (!el) return;
+                var isNight = document.body.classList.contains('night');
+                el.textContent = isNight ? '\u2600\ufe0f' : '\uD83C\uDF19';
+                el.setAttribute('aria-pressed', isNight ? 'true' : 'false');
+            }
+            
+            var savedTheme = null;
+            try { savedTheme = localStorage.getItem('themeMode'); } catch (e) {  }
+            if (savedTheme === 'night') {
+                document.body.classList.add('night');
+            } else if (savedTheme === 'day') {
+                document.body.classList.remove('night');
+            } else {
+                
+            }
+            if (themeToggleBtn) {
+                updateThemeIcon(themeToggleBtn);
+                themeToggleBtn.addEventListener('click', function() {
+                    var isNight = document.body.classList.toggle('night');
+                    try { localStorage.setItem('themeMode', isNight ? 'night' : 'day'); } catch (e) {}
+                    updateThemeIcon(themeToggleBtn);
+                });
+                
+                themeToggleBtn.addEventListener('keydown', function(e){
+                    if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); themeToggleBtn.click(); }
+                });
+            } else {
+                console.warn('主题切换按钮未找到（id=theme-toggle）');
+            }
+
+            console.log('二维码容器已初始化');
+        }
+
+        
+        function setupPrintStyles(title, path) {
+            const oldStyle = document.getElementById('print-styles');
+            if (oldStyle) oldStyle.remove();
+
+            const style = document.createElement('style');
+            style.id = 'print-styles';
+            
+            const now = new Date();
+            const tsY = now.getFullYear();
+            const tsM = now.getMonth() + 1;
+            const tsD = now.getDate();
+            const tsH = String(now.getHours()).padStart(2,'0');
+            const tsMin = String(now.getMinutes()).padStart(2,'0');
+            const tsS = String(now.getSeconds()).padStart(2,'0');
+            const timestamp = `${tsY}年${tsM}月${tsD}日  ${tsH}:${tsMin}:${tsS}`;
+
+            
+            const safePath = (path || '').replace(/"/g, '\\"').replace(/\n/g, ' ');
+
+            style.textContent = `
+                @media print {
+                    @page {
+                        margin: 2cm 2cm 2.5cm 2cm;
+                        size: A4;
+
+                        @top-left {
+                            content: "${timestamp}";
+                            border-bottom: 1px solid #ccc !important;
+                            padding-bottom: 5px;
+                            vertical-align: bottom;
+                            font-size: 12px;
+                        }
+
+                        @top-right {
+                            content: "${title}";
+                            border-bottom: 1px solid #ccc !important;
+                            padding-bottom: 5px;
+                            vertical-align: bottom;
+                            font-size: 14px;
+                        }
+
+                        @bottom-left {
+                            content: "来源：${path}";
+                            border-top: 1px solid #ccc !important;
+                            padding-top: 5px;
+                            vertical-align: top;
+                            width: 60%;
+                            white-space: pre-wrap;
+                            font-size: 12px;
+                        }
+
+                        @bottom-right {
+                            content: "第" counter(page) "页 共" counter(pages) "页";
+                            border-top: 1px solid #ccc !important;
+                            padding-top: 5px;
+                            vertical-align: top;
+                            font-size: 12px;
+                        }
+                    }
+
+                    
+                    .print-qrcode-container {
+                        display: flex !important;
+                        position: fixed !important;
+                        right: 1.2cm !important;
+                        bottom: 0.6cm !important;
+                        z-index: 9999 !important;
+                        width: 48px !important;
+                        height: 48px !important;
+                        justify-content: flex-end !important;
+                        align-items: flex-end !important;
+                        background: none !important;
+                        box-shadow: none !important;
+                        pointer-events: none !important;
+                    }
+                    .print-qrcode-img {
+                        width: 48px !important;
+                        height: 48px !important;
+                        object-fit: contain !important;
+                        background: #fff !important;
+                        border: 1px solid #ccc !important;
+                        border-radius: 4px !important;
+                        box-shadow: 0 1px 4px rgba(0,0,0,0.08) !important;
+                        margin: 0 !important;
+                        padding: 0 !important;
+                    }
+                }
+                @media screen {
+                    .print-qrcode-container {
+                        display: none !important;
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            console.log('打印样式已设置');
+        }
+
+        
+        window.onbeforeprint = function() {
+            console.log('打印前事件触发');
+            updateTimestamp();
+            const path = setSourcePath();
+            const title = setDocumentTitle();
+            setupPrintStyles(title, path);
+            
+            
+            const qr = document.getElementById('print-qrcode');
+            if (qr) {
+                qr.style.display = 'flex';
+                console.log('二维码显示状态已设置');
+            }
+            
+            const sideNav = document.querySelectorAll('.side-nav, .top-float-nav, .print-button, .theme-toggle');
+            sideNav.forEach(function(el){ if(el) el.style.display = 'none'; });
+        };
+        
+        window.onafterprint = function() {
+            console.log('打印后事件触发');
+            const qr = document.getElementById('print-qrcode');
+            if (qr) qr.style.display = 'none';
+            
+            const sideNav = document.querySelectorAll('.side-nav, .top-float-nav, .print-button, .theme-toggle');
+            sideNav.forEach(function(el){ if(el) el.style.display = ''; });
+        };
+
+        
+        window.onload = init;
+    </script>
+</body>
+</html>
