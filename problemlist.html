@@ -590,7 +590,9 @@
     .read-link:hover{filter:brightness(0.95);transform:translateY(-1px)}
     
     @media (max-width:600px){
-        .read-nav{overflow-x:auto;padding:6px 8px;gap:8px;display:flex}
+        /* 移动端隐藏顶部阅读导航和右侧浮动导航（按需求：清除移动端的顶部导航栏） */
+        .read-nav,
+        .top-float-nav { display: none !important; }
         .read-link{white-space:nowrap;font-size:13px}
     }
 
@@ -660,30 +662,6 @@
 .top-float-nav::-webkit-scrollbar-thumb:hover{ background: rgba(25,95,180,0.28); }
 .top-float-nav{ scrollbar-width: thin; scrollbar-color: rgba(25,95,180,0.15) transparent; }
     </style>
-    <div class="read-nav" role="navigation" aria-label="阅读导航">
-    <a class="read-link" href="#problemlist">问题清单</a>
-    <a class="read-link" href="#section-laws">援引法条</a>
-    <a class="read-link" href="#000200">起诉书</a>
-    <a class="read-link" href="#000400">量刑建议书</a>
-    <a class="read-link" href="#000500">换押证</a>
-    <a class="read-link" href="#000900">起诉书副本送达笔录</a>
-    <a class="read-link" href="#001100">指定辩护律师笔录</a>
-    <a class="read-link" href="#001500">对辩护律师的起诉书副本送达回证</a>
-    <a class="read-link" href="#001600">对公诉人周江红的出庭通知书送达回证</a>
-    <a class="read-link" href="#001700">开庭公告</a>
-    <a class="read-link" href="#001800">审判笔录</a>
-    <a class="read-link" href="#002400">王贵平的看守所入所健康档案</a>
-    <a class="read-link" href="#003400">王贵平的自书辩护词</a>
-    <a class="read-link" href="#004300">王贵平的刑事判决书</a>
-    <a class="read-link" href="#004600">一审宣判笔录</a>
-    <a class="read-link" href="#004700">一审判决书送达回证</a>
-    <a class="read-link" href="#004800">对公诉人周江红的一审判决书送达回证</a>
-    <a class="read-link" href="#004900">对辩护人的一审判决书送达回证</a>
-    <a class="read-link" href="#005000">2019年7月2日开庭提押票</a>
-    <a class="read-link" href="#005100">致中院的案卷移送函</a>
-    <a class="read-link" href="#0053600">（2019）黔01刑终667号刑事裁定书</a>
-    <a class="read-link" href="#005600">执行通知书回执</a>
-    <a class="read-link" href="#005700">执行通知书存根</a>
     </div>
 
     
@@ -1820,6 +1798,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
         
         window.onload = init;
+    </script>
+    <script>
+    // 移动端清除顶部阅读导航内容（保留右侧边导航）
+    document.addEventListener('DOMContentLoaded', function() {
+        try {
+            if (window.innerWidth <= 600) {
+                var readNav = document.querySelector('.read-nav');
+                if (readNav) {
+                    // 清空内容并保留占位注释，便于桌面端样式或未来恢复
+                    readNav.innerHTML = '<!-- 移动端已移除顶部阅读导航，使用右侧边导航 -->';
+                }
+            }
+        } catch (e) {
+            console.warn('清除移动端顶部导航内容时出错', e);
+        }
+    });
     </script>
 </body>
 </html>
