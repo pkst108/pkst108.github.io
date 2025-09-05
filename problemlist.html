@@ -1414,6 +1414,63 @@
             [leftNav, rightNav].forEach(function(nav){ if(!nav) return; nav.querySelectorAll('.nav-btn').forEach(function(a){ a.addEventListener('click', closeOnNavClick); }); });
         });
         </script>
+        <script>
+        // Sync left/right nav contents on mobile and bind behaviors
+        document.addEventListener('DOMContentLoaded', function(){
+            if(!(window.matchMedia && window.matchMedia('(max-width:600px)').matches)) return;
+            var leftNav = document.getElementById('nav');
+            var rightNav = document.getElementById('top-nav');
+            if(!leftNav || !rightNav) return;
+
+            // collect unique items (preserve anchors and dropdowns as outerHTML)
+            var seen = new Set();
+            var items = [];
+            [leftNav, rightNav].forEach(function(nav){
+                Array.from(nav.children).forEach(function(ch){
+                    var key = ch.tagName + '::' + (ch.getAttribute('href') || ch.className || ch.outerHTML);
+                    if(!seen.has(key)){
+                        seen.add(key);
+                        items.push(ch.outerHTML);
+                    }
+                });
+            });
+
+            var html = items.join('\n');
+            // apply same content to both navs on mobile
+            leftNav.innerHTML = html;
+            rightNav.innerHTML = html;
+
+            // Helper: smooth scroll to anchor with header offset
+            function scrollToId(id){
+                var target = document.getElementById(id);
+                if(!target) return;
+                var header = document.querySelector('.header-screen');
+                var headerHeight = header ? header.offsetHeight : 80;
+                var extra = 12;
+                var top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - extra;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+                try{ target.setAttribute('tabindex','-1'); target.focus({preventScroll:true}); }catch(e){ try{ target.focus(); }catch(e){} }
+            }
+
+            function closePanels(){
+                leftNav.classList.remove('open'); rightNav.classList.remove('open');
+                var lt = document.getElementById('mobile-left-toggle'); if(lt) lt.setAttribute('aria-expanded','false');
+                var rt = document.getElementById('mobile-right-toggle'); if(rt) rt.setAttribute('aria-expanded','false');
+            }
+
+            // bind clicks on new anchors
+            [leftNav, rightNav].forEach(function(nav){
+                nav.querySelectorAll('a.nav-btn[href^="#"]').forEach(function(a){
+                    a.addEventListener('click', function(e){
+                        var id = a.getAttribute('href').slice(1);
+                        if(id){ e.preventDefault(); scrollToId(id); }
+                        // close after a short delay to allow scroll to start
+                        setTimeout(closePanels, 60);
+                    });
+                });
+            });
+        });
+        </script>
 <style>
 .side-dropdown { position: relative; }
 .side-dropdown-menu {
