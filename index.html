@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?665d59103c1cc58094371b6e1f95acb2";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问题监督解决</title>
+    <style>
+        body { font-family: "Microsoft YaHei", Arial, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; }
+        .title { text-align: center; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+        .section { margin-bottom: 1.2rem; }
+        .section-title { font-size: 1.1rem; color: #2980b9; margin-bottom: 0.5rem; font-weight: bold; }
+        .highlight { color: #e74c3c; font-weight: bold; }
+        .law { background-color: #f8f9fa; padding: 0.8rem; border-left: 3px solid #3498db; border-radius: 0 4px 4px 0; }
+            /* 悬浮导航栏样式 */
+            .sidebar-nav {
+                position: fixed;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(255,255,255,0.95);
+                border-radius: 0 8px 8px 0;
+                box-shadow: 2px 0 8px #ccc;
+                z-index: 999;
+                padding: 16px 10px;
+                min-width: 140px;
+            }
+            .sidebar-nav ul { list-style: none; padding: 0; margin: 0; }
+            .sidebar-nav li { margin: 12px 0; }
+            .sidebar-nav a {
+                color: #2980b9;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.2s;
+            }
+            .sidebar-nav a:hover { color: #e67e22; }
+            /* 主题切换按钮样式 */
+            .theme-toggle {
+                position: fixed;
+                top: 24px;
+                right: 32px;
+                z-index: 1000;
+                background: #fff;
+                border-radius: 50%;
+                box-shadow: 0 2px 8px #ccc;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                border: none;
+                outline: none;
+            }
+            .theme-toggle svg { width: 28px; height: 28px; }
+            /* 夜间模式 */
+            body.night {
+                background: #23272e;
+                color: #e0e0e0;
+            }
+            body.night .title { color: #f7ca18; border-bottom: 2px solid #f7ca18; }
+            body.night .section-title { color: #f7ca18; }
+            body.night .law { background: #2c3e50; border-left: 3px solid #f7ca18; }
+            body.night .sidebar-nav { background: rgba(44,62,80,0.98); box-shadow: 2px 0 8px #222; }
+            body.night .sidebar-nav a { color: #f7ca18; }
+            body.night .sidebar-nav a:hover { color: #e67e22; }
+            body.night .theme-toggle { background: #23272e; box-shadow: 0 2px 8px #222; }
+    </style>
+        <script>
+        // 主题切换
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('night');
+            localStorage.setItem('theme', body.classList.contains('night') ? 'night' : 'day');
+            updateThemeIcon();
+        }
+        function updateThemeIcon() {
+            const btn = document.getElementById('theme-toggle-btn');
+            if (!btn) return;
+            if (document.body.classList.contains('night')) {
+                btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="6" fill="#f7ca18"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="#f7ca18" stroke-width="2"/></svg>';
+            } else {
+                btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" fill="#2980b9"/></svg>';
+            }
+        }
+        window.addEventListener('DOMContentLoaded', function() {
+            // 主题初始化
+            if(localStorage.getItem('theme') === 'night') {
+                document.body.classList.add('night');
+            }
+            updateThemeIcon();
+        });
+        </script>
+</head>
+<body>
+    <!-- 悬浮导航栏 -->
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="#section1">一、文件基本信息</a></li>
+            <li><a href="#section2">二、公开渠道查询结果</a></li>
+            <li><a href="#section3">三、文件应当公开的法律依据</a></li>
+            <li><a href="#section4">四、不良影响</a></li>
+            <li><a href="#section5">五、需贵州省高级人民法院确认及回应的事项</a></li>
+        </ul>
+    </nav>
+    <!-- 主题切换按钮 -->
+    <button class="theme-toggle" id="theme-toggle-btn" onclick="toggleTheme()" title="切换昼夜模式"></button>
+    <h1 class="title">关于黔高法〔2021〕69号文公开却约束公众阅卷权利行使的问题质疑</h1>
+
+    <!-- 一、文件基本信息 -->
+    <div class="section" id="section1">
+        <div class="section-title">一、文件基本信息</div>
+        <ul>
+            <li>文件名称：黔高法〔2021〕69号文</li>
+            <li>文件性质：涉及诉讼档案查阅、摘抄、复制权限及公众诉讼权利的规范性文件（第五条明确约束公众阅卷行为）</li>
+            <li>关联利益：直接涉及公众（含案件当事人、合法阅卷人）的知情权、诉讼档案利用权，属于《政府信息公开条例》规定的“涉公众利益”文件</li>
+        </ul>
+            <!-- 插入红色箭头所指位置图片 -->
+            <div style="text-align:center; margin: 20px 0;">
+                <img src="images/files/IMG_20250903_235000.jpg" alt="红色箭头所指位置图片" style="max-width: 80%; border: 2px solid #ccc; box-shadow: 0 2px 8px #aaa;">
+            </div>
+    </div>
+
+    <!-- 二、公开渠道查询情况 -->
+    <div class="section" id="section2">
+        <div class="section-title">二、公开渠道查询结果（截至沟通当日）</div>
+        <p>经尝试以下公开渠道，均未查询到“黔高法〔2021〕69号文”全文或公开获取路径：</p>
+        <ul>
+            <li>1. 贵州省高级人民法院官方网站（含“信息公开”“诉讼服务”栏目）</li>
+            <li>2. 中国法院网、最高人民法院司法公开平台</li>
+            <li>3. 贵州省政府信息公开平台及相关政务公开渠道</li>
+            <li>4. 公开的法律数据库（如北大法宝、无讼案例等）</li>
+        </ul>
+        <p class="highlight">结论：该文件未通过法定公开渠道向社会公开，公众无法依法获取。</p>
+    </div>
+
+    <!-- 三、法律依据 -->
+    <div class="section" id="section3">
+        <div class="section-title">三、文件应当公开的法律依据</div>
+        <div class="law">
+            1. 《中华人民共和国政府信息公开条例》第十九条：对涉及公众利益调整、需要公众广泛知晓或者需要公众参与决策的政府信息，行政机关应当主动公开。<br>
+            2. 《中华人民共和国政府信息公开条例》第五条：行政机关公开政府信息，应当坚持以公开为常态、不公开为例外，遵循公正、公平、合法、便民的原则。<br>
+            3. 最高人民法院关于司法公开的相关规定：涉及公众诉讼权利、诉讼流程的规范性文件，应当通过官方渠道主动公开，保障公众知情权和权利行使。<br>
+            4.《人民法院诉讼档案管理办法》和《人民法院电子诉讼档案管理暂行办法》（法〔2013〕283号）<br>
+            5.《最高人民法院印发<关于全面推进人民法院电子卷宗随案同步生成和深度应用的指导意见>的通知》(法〔2016〕264号)
+        </div>
+    </div>
+
+    <!-- 四、不良影响 -->
+    <div class="section" id="section4">
+        <div class="section-title">四、不良影响</div>
+        <ol>
+            <li>我在贵州某基层法院档案室查档遇阻，该院档案工作人员出具了上图所示文件，声称是黔高法〔2021〕69号，限制了我的阅卷权利；</li>
+            <li>该院出具的文件内容与全国性的法律法规或规范性文件限制了阅卷人的权利更细化，却在公开渠道无法查询，引起我对其效力的质疑。</li>
+        </ol>
+    </div>
+    <!-- 五、核心诉求 -->
+    <div class="section" id="section5">
+        <div class="section-title">五、需贵州省高级人民法院确认及回应的事项</div>
+        <ol>
+            <li>确认“黔高法〔2021〕69号文”的性质，它是内部文件还是涉及公众利益的文件？若其内容涉及公众权利的行使，请问该文件是否已公开？</li>
+            <li>若已公开：请明确查询方式和渠道；</li>
+            <li>若暂未公开：请明确该法院档案室工作人员的行为是否违法。</li>
+        </ol>
+    </div>
+</body>
+</html>
