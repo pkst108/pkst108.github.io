@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>(2019)黔0103刑初821号查档2问题清单</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+        }
+        .table-title {
+            text-align: center;
+            font-size: 2em;
+            margin: 30px 0 20px 0;
+            color: #fff;
+            letter-spacing: 0.2em;
+        }
+        .table-container {
+            width: 90%;
+            margin: 0 auto 40px auto;
+            max-height: 600px;
+            overflow-x: auto;
+            overflow-y: auto;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.5);
+            background: #222;
+            border-radius: 6px;
+        }
+        table {
+            border-collapse: collapse;
+            width: auto;
+            min-width: 100%;
+            background: #222;
+            table-layout: auto;
+            position: relative;
+        }
+        th, td {
+            border: 1.5px solid #4cafef;
+            padding: 10px 16px;
+            text-align: center;
+            white-space: nowrap;
+        }
+        th {
+            background: #1a2733;
+            color: #4cafef;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+        /* 固定序号列 */
+        th:first-child,
+        td:first-child {
+            position: sticky;
+            left: 0;
+            background: #1a2733;
+            z-index: 3;
+        }
+        /* 特别处理表头的序号列 */
+        th:first-child {
+            z-index: 4;
+        }
+        td:first-child {
+            background: #222;
+        }
+        tr:nth-child(even) {
+            background: #232b36;
+        }
+        tr:nth-child(odd) {
+            background: #222;
+        }
+        tr:nth-child(even) td:first-child {
+            background: #232b36;
+        }
+        a {
+            color: #4cafef;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #fff;
+            background: #4cafef;
+            border-radius: 3px;
+            padding: 2px 6px;
+            text-decoration: none;
+        }
+        /* 文件名一列左对齐 */
+        th.filename-col, td.filename-col {
+            text-align: left;
+        }
+        /* 阅卷标注列宽自适应 */
+        th.mark-col, td.mark-col {
+            min-width: 60px;
+            text-align: left;
+        }
+        /* 备注栏左对齐 */
+        th.remark-col, td.remark-col {
+            text-align: left;
+        }
+        /* 新增列样式 */
+        th.source-col, td.source-col,
+        th.time-col, td.time-col,
+        th.sha256-col, td.sha256-col,
+        th.sm3-col, td.sm3-col,
+        th.purpose-col, td.purpose-col {
+            text-align: left;
+            font-size: 0.9em;
+        }
+        .hash-value {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="table-title">一、（2019）黔0103刑初821号案件走势表</div>
+    <div class="table-container">
+        <table id="案件走势表">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>诉讼阶段</th>
+                    <th>开始时间</th>
+                    <th>截止时间</th>
+                    <th>被告人所处具体位置</th>
+                    <th>管辖单位</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>案发阶段</td>
+                    <td>2019年1月20日 18时20分许</td>
+                    <td>2019年1月20日 18时30分许</td>
+                    <td>贵阳市云岩区大十字广场河西路边的公园广场</td>
+                    <td>贵阳市云岩区人民政府</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>抓捕阶段</td>
+                    <td>2019年1月20日 18时50分许</td>
+                    <td>2019年1月20日 19时00分许</td>
+                    <td>距案发地点30米左右的公安岗亭内</td>
+                    <td>贵阳市云岩区人民政府</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>滞留派出所阶段</td>
+                    <td>2019年1月20日 19时05分许</td>
+                    <td>2019年1月21日 22时50分</td>
+                    <td>贵阳市云岩区毓秀路派出所</td>
+                    <td>贵阳市公安局云岩分局</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>刑事拘留阶段</td>
+                    <td>2019年1月21日 22时50分</td>
+                    <td>2019年1月29日</td>
+                    <td>贵阳市云岩区看守所</td>
+                    <td>贵阳市公安局云岩分局</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>逮捕后的羁押侦查阶段</td>
+                    <td>2019年1月29日</td>
+                    <td>2019年3月27日</td>
+                    <td>贵阳市云岩区看守所</td>
+                    <td>贵阳市公安局云岩分局</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>审查起诉阶段</td>
+                    <td>2019年3月27日</td>
+                    <td>2019年6月12日</td>
+                    <td>贵阳市云岩区看守所</td>
+                    <td>贵阳市云岩区人民检察院</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>审理审判阶段</td>
+                    <td>2019年6月12日</td>
+                    <td>2019年8月1日</td>
+                    <td>贵阳市云岩区看守所</td>
+                    <td>贵阳市云岩区人民法院</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>上诉阶段</td>
+                    <td>2019年8月1日</td>
+                    <td>2019年8月27日</td>
+                    <td>贵阳市云岩区看守所</td>
+                    <td>贵阳市中级人民法院</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+
+    <div class="table-title">二、（2019）黔0103刑初821号.pdf【2025年9月2日在一审档案室刻录取得】</div>
+    <div class="table-container">
+        <table id="pdf文件">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th class="source-col">来源</th>
+                    <th class="time-col">文件形成时间</th>
+                    <th class="filename-col">文件名</th>
+                    <th class="sha256-col">SHA256哈希值</th>
+                    <th class="sm3-col">SM3哈希值</th>
+                    <th class="remark-col">备注</th>
+                    <th>查看原件</th>
+                    <th class="purpose-col">证明目的</th>
+                    <th class="mark-col">阅卷标注</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2025年9月1日  09:48:24</td>
+                    <td class="filename-col">（2019）黔0103刑初821号.pdf</td>
+                    <td class="sha256-col"><span class="hash-value">A9079E98DB6033FD8531D53F54DBCAE7E856CE580E10B377B0E6D41739D37B45</span></td>
+                    <td class="sm3-col"><span class="hash-value">1E1AA7701A877A3C7D74A129319194E56BEA3CF3A4842A81EF60CFDB8EA37BA4</span></td>
+                    <td class="remark-col">PDF文件</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/(2019)黔0103刑初821号.pdf" target="_blank">查看</a></td>
+                    <td class="purpose-col">该PDF有法院档案室电子证明专用章，与原件正本具有同等法律效力</td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  16:00:44</td>
+                    <td class="filename-col">000300-起诉书正本.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">883FDF65E522EB57B8B67F45E6C0805B311A16485D11A3A5970986C9382F3EDF</span></td>
+                    <td class="sm3-col"><span class="hash-value">FDB8A89C11725A089E65A1DDF68A91D5052182AD5FD6806CC8A26F34B2295B22</span></td>
+                    <td class="remark-col">起诉书第2页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/000300-起诉书正本.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明起诉书内容及制作时间</td>
+                    <td class="mark-col">页面底部有防伪条码标识，制作具体时间可进一步核实。</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  15:53:06</td>
+                    <td class="filename-col">000400-量刑建议书.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">352A5FA6DCDED4E6D9B8AE3E214DF36DB9C39FC19ECBE1B0DF6D8A8381039A0D</span></td>
+                    <td class="sm3-col"><span class="hash-value">0752D0920325351D81FB1E9B7C8E42994D07EA5F98236AD27D0F603300618943</span></td>
+                    <td class="remark-col">量刑建议书共1页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/000400-量刑建议书.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明量刑建议及相关时间信息</td>
+                    <td class="mark-col">有防伪标识，落款日期是2019年6月11日</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  15:50:46</td>
+                    <td class="filename-col">000500-换押证.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">1F99E4705E1019BBD38D8ED8DC692774BDCD8AF74552D6EC59DC9D6D3E44BEA1</span></td>
+                    <td class="sm3-col"><span class="hash-value">3506AA188F8EA2DA32E73FCEC128C2A44773603CB50D4AB1A90BA6235A665E4F</span></td>
+                    <td class="remark-col">云检公诉换字〔2019〕4347号换押证第五联</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/000500-换押证.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明换押程序及时间</td>
+                    <td class="mark-col">正卷附卷的第一个换押证（第五联）</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  16:27:44</td>
+                    <td class="filename-col">000600-换押证.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">4257FA1F5EE89F9D922732E54A692C6F713908C86EF093EDE21BB12C32BC6462</span></td>
+                    <td class="sm3-col"><span class="hash-value">69FEBE956EE61C2881690B29AB6AF096B0C5F30ABEB3707F3047B25D846B9768</span></td>
+                    <td class="remark-col">云检公诉换字〔2019〕4347号换押证第二联</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/000600-换押证.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明换押程序及时间</td>
+                    <td class="mark-col">正卷附卷的第一个换押证（第二联）</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  16:26:04</td>
+                    <td class="filename-col">000700-换押证.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">FB34FF56F95CB019720FE8F95230A9C5843E8813C4D64C39C26C6F9E6BC0DD1B</span></td>
+                    <td class="sm3-col"><span class="hash-value">AB06A2D346853218D45A00031DEB60AC9BF14E93E3FA94C3D2173AFD2C92A9D2</span></td>
+                    <td class="remark-col">（云）换字〔2019〕821号换押证</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/000700-换押证.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明换押程序及时间</td>
+                    <td class="mark-col">正卷附卷的第二个换押证（存根联）</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  16:22:44</td>
+                    <td class="filename-col">000800-换押证.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">FB34FF56F95CB019720FE8F95230A9C5843E8813C4D64C39C26C6F9E6BC0DD1B</span></td>
+                    <td class="sm3-col"><span class="hash-value">AB06A2D346853218D45A00031DEB60AC9BF14E93E3FA94C3D2173AFD2C92A9D2</span></td>
+                    <td class="remark-col">（云）换字〔2019〕821号换押证</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/000800-换押证.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明换押程序及时间</td>
+                    <td class="mark-col">正卷附卷的第二个换押证（第一联移送机关附卷）</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  16:21:48</td>
+                    <td class="filename-col">000900-送达起诉书副本笔录.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">FEEADA431F37ED9683E98CF681BEFE1D6660C5FE00102A72E2C0832EFB780363</span></td>
+                    <td class="sm3-col"><span class="hash-value">ACEBFD4AF094A186F1CFBDA424C6DB71CFC2103B596BAF004FF3C0C0CA2BC4D5</span></td>
+                    <td class="remark-col">送达起诉书副本笔录第1页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/000900-送达起诉书副本笔录.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明起诉书送达时间及王贵平拒收情况</td>
+                    <td class="mark-col">显示送达日期是2019年6月14日</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  16:16:44</td>
+                    <td class="filename-col">001000-送达起诉书副本笔录.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">5EB04ABBE3C3FE93A018B78BE851DB5E80DC233BEE716429F221EA411F4706CC</span></td>
+                    <td class="sm3-col"><span class="hash-value">4EC906079983601EC411642FD9DE6ADC68FC8713C888330BE81607B6FD30A0DB</span></td>
+                    <td class="remark-col">送达起诉书副本笔录第1页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/001000-送达起诉书副本笔录.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明起诉书送达及王贵平拒收情况</td>
+                    <td class="mark-col">清晰记载王贵平拒签拒收，表明王贵平未实际收到起诉书副本，揭露超期送达问题。</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  16:13:46</td>
+                    <td class="filename-col">001100-送达起诉书副本笔录.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">5DF257DA8BDDCC909591A9C900CA62E9348DF24850355CA1B10D7E03EA1070EC</span></td>
+                    <td class="sm3-col"><span class="hash-value">C4908410B7E5D373BE682D0A9743D43FD2A1839D2830F4B2B75744CD9ED6BCB4</span></td>
+                    <td class="remark-col">委托（指定）辩护律师辩护笔录，共1页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/001100-送达起诉书副本笔录.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明辩护律师指定程序</td>
+                    <td class="mark-col">归档对应名称有误。</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  16:54:22</td>
+                    <td class="filename-col">001200-法律援助公函.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">BBE26CCC90CB407DE1C5C4FA19746D3610821B5EBD6D23F0BC6E0158BDA2E308</span></td>
+                    <td class="sm3-col"><span class="hash-value">523B8253EA31009E71F6723D49DF2C32F31F82BAA8A80A5A503C09228572DAD6</span></td>
+                    <td class="remark-col">指定辩护人通知书</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/001200-法律援助公函.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明法律援助程序</td>
+                    <td class="mark-col">一审法院通知法律援助中心</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  16:52:18</td>
+                    <td class="filename-col">001300-法律援助公函.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">36C9582DB85BE28BE081031E525C1FB038F2D99C989AA669118FF9DA28A39061</span></td>
+                    <td class="sm3-col"><span class="hash-value">55CA9917DBC032491712301E99244EDD53556B11404EC530740DFECEDBA3B70D</span></td>
+                    <td class="remark-col">法律援助公函 (通知辩护)</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/001300-法律援助公函.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明法律援助程序</td>
+                    <td class="mark-col">法律援助中心回复一审法院</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  16:49:16</td>
+                    <td class="filename-col">001400-法律援助公函.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">E16FF246C8A667CF4FA361B34C3D5FE791000D2FA9ECF12777565A48A2E87A34</span></td>
+                    <td class="sm3-col"><span class="hash-value">C6C3A45A6662E452B6C38B21827DCBE783F94A013CFD09C12FC96D1B8B56DB7B</span></td>
+                    <td class="remark-col">委派援助律师资质证明</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/001400-法律援助公函.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明辩护律师资质</td>
+                    <td class="mark-col">许涛的资质证明文件</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  16:45:34</td>
+                    <td class="filename-col">001500-送达回证.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">B789C32667157A565B4A8F8C111943BB4E680970C2B8ECE23708DC14B3B794F7</span></td>
+                    <td class="sm3-col"><span class="hash-value">4390AD8EA1D6044017BAA28F5F3A607003ADB9FDD593C31F46B8E9FEA8208EE4</span></td>
+                    <td class="remark-col">送达起诉书副本回证（受送人为辩护人，指代法律援助律师）</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/001500-送达回证.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明起诉书副本送达情况</td>
+                    <td class="mark-col">受送达人未签字，不清楚是否收到，也可能存在风险未签字担责的可能。</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  16:42:42</td>
+                    <td class="filename-col">001600-出庭通知书.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">0AB8494D3C79575CD15414BC83D7978A5F1A494B67836B3F231409241B3E233F</span></td>
+                    <td class="sm3-col"><span class="hash-value">EA7FBE21A6B99E90BDB7AE993AF1B97A3E927FDA372701D933FEE1DF8A081CBC</span></td>
+                    <td class="remark-col">出庭通知书回证 </td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/001600-出庭通知书.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明出庭通知情况</td>
+                    <td class="mark-col">显示被通知人是公诉人周江红，无其他人，包括受害人、证人、勘验检查人、办案人、鉴定人。</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:22:46</td>
+                    <td class="filename-col">001700-公告.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">2E1D21248DE43519A144355F4000DCB770B171DCAFC4977766D19484B9C2C06A</span></td>
+                    <td class="sm3-col"><span class="hash-value">D4F27FAD2299B990A3771F95A5F5873EB5871540C89A16289F726FFCC1984069</span></td>
+                    <td class="remark-col">一审开庭公告</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/001700-公告.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明开庭公告时间</td>
+                    <td class="mark-col">落款日期是2019年6月29日</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:20:30</td>
+                    <td class="filename-col">001800-刑事庭审笔录.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">9814A9EB4A7ABCF8A798BF3CC1CB36F36FE24B5EACE69E73659BF81B3D4B39CB</span></td>
+                    <td class="sm3-col"><span class="hash-value">8121EC4B47CF72738EA735496B895175E7F153E03CB6AB47C4EA54B5B7B0781F</span></td>
+                    <td class="remark-col">一审刑事庭审笔录第1页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/001800-刑事庭审笔录.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明庭审过程及王贵平反映的问题</td>
+                    <td class="mark-col">显示庭审时间是2019年7月2日10时，但王贵平在开庭时首先询问了审判长、书记员的姓名，并反应了自己未收到起诉书的事情没有如实记入庭审笔录中。</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:18:46</td>
+                    <td class="filename-col">001900-刑事庭审笔录.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">054F45E5C56C16F7E1ECE069063BD0C02899BFCA4DB091CBB490CCB1BE7C687A</span></td>
+                    <td class="sm3-col"><span class="hash-value">5055CFB3BCF1598BC5C14721A8E7BF681D530E51FBA5436D0E4472CCD2170B8D</span></td>
+                    <td class="remark-col">一审刑事庭审笔录第2页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/001900-刑事庭审笔录.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明庭审记录与送达记录的矛盾</td>
+                    <td class="mark-col">一审刑事庭审笔录第2页记录王贵平在十日前收到起诉书副本的回答，很明显与2019年6月14日送达起诉书副本笔录矛盾，做实弄虚作假的铁证。</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:14:32</td>
+                    <td class="filename-col">002000-刑事庭审笔录.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">07C5C86D5FFD38C7D6C8733A8268A35E74CEBEF97F50EE5B78D943F61EC522D0</span></td>
+                    <td class="sm3-col"><span class="hash-value">BD4AF0AC613E31F49782A25A04D204331DDDC45C0EDF8F1D51851B5EEA8C8E86</span></td>
+                    <td class="remark-col">一审刑事庭审笔录第3页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/002000-刑事庭审笔录.jpg" target="_blank">查看</a>
+                    </td>
+                    <td class="purpose-col"></td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:13:06</td>
+                    <td class="filename-col">002100-刑事庭审笔录.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">563100EA429257302212DE9DE7B1BD3573811F7E4A66C4428E76931D8F319FB6</span></td>
+                    <td class="sm3-col"><span class="hash-value">9601876E8CA59588B57B93B3DAEF9816864B05F66536684DE06FE8095A9636F5</span></td>
+                    <td class="remark-col">一审刑事庭审笔录第4页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/002100-刑事庭审笔录.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col"></td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:11:16</td>
+                    <td class="filename-col">002200-刑事庭审笔录.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">7A91990AACDD8E6766EBA5B1F76B9B0FD8EBF38261D9762DAA141A6334366249</span></td>
+                    <td class="sm3-col"><span class="hash-value">27EE6AFE95CAD5649D715720F79F055637A63DE2DA977C7C537E85C2FEF0E684</span></td>
+                    <td class="remark-col">一审刑事庭审笔录第5页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/002200-刑事庭审笔录.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col"></td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:07:46</td>
+                    <td class="filename-col">002300-刑事庭审笔录.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">4D284B75402075ABF8B5CF1FF56D01DF8A86C3FC3F610709F6F9373B0F4532B1</span></td>
+                    <td class="sm3-col"><span class="hash-value">6513F63DD1C22153ED3B36465633584605B1044700509D484F3587C935643C96</span></td>
+                    <td class="remark-col">一审刑事庭审笔录第6页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/002300-刑事庭审笔录.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col"></td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:53:28</td>
+                    <td class="filename-col">002400-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">0823F25C7A8D68102A03B843B87428D1B96FC2453A3D2D5793AE79247C225B51</span></td>
+                    <td class="sm3-col"><span class="hash-value">FCB70FF72C151EF5C2C724B4B949A82CBE54F1DFC364867152BD1C33B52FB5C7</span></td>
+                    <td class="remark-col">王贵平的看守所入所健康档案封面</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/002400-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明王贵平入所时间</td>
+                    <td class="mark-col">显示送达看守所时间是2019年1月21日22时50分</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:52:14</td>
+                    <td class="filename-col">002500-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">1B48BEFEB1214C9A7D4E8F309EACD0C79BD12E73B93D49BE1ECF035600CE0B89</span></td>
+                    <td class="sm3-col"><span class="hash-value">A812AF55E40E03735D7A1051C356957095F8971F5D27A2F80AF7FDCDBD4788C9</span></td>
+                    <td class="remark-col">王贵平的看守所入所健康档案基本信息第1页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/002500-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明王贵平身体状况及可能遭受的暴力执法</td>
+                    <td class="mark-col">外伤选项记录"自诉在抢劫手机殴打被害人手机过程中，致右眼、左背部及双手软组织损伤"，存在明显不合常理的虚假记录，殴打者殴打被殴打者是被殴打者受伤才合常理，这记录相当于甲某打乙某，乙没还手没受伤，反而甲某受伤了。</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:49:16</td>
+                    <td class="filename-col">002600-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">9574870C0941E554ABF63D3F1294185058077D8AEC4E89301BA64A31D6E747F9</span></td>
+                    <td class="sm3-col"><span class="hash-value">41DDFA5A6BA4885D033D5CA7E36659213F4982FFEE10A68EC8602E51532B3B6E</span></td>
+                    <td class="remark-col">王贵平的看守所入所健康档案基本信息第2页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/002600-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明王贵平否认被被害人打但可能被办案人员打</td>
+                    <td class="mark-col">"否认被打"表明王贵平没有被被害人打，但没有否认被不法办案人员打</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:45:26</td>
+                    <td class="filename-col">002700-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">28C0A4BB36CC8AF2C3E2B46A9264E6CA1CEA2649F581A627B4A06D5993C55387</span></td>
+                    <td class="sm3-col"><span class="hash-value">AAF4A2A606D0A864527C8ECA29F0C2D211D463D825CF3182AFEDFBAA1AEB0DA4</span></td>
+                    <td class="remark-col">王贵平的看守所入所健康档案体表标识图</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/002700-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明王贵平伤情及暴力执法问题</td>
+                    <td class="mark-col">标识图清晰标注了王贵平伤情的具体位置，显示右眼、左背软组织损伤，双手背肿胀。客观证实毓秀路派出所办案工作人员的暴力执法渎职侵权问题。</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:40:44</td>
+                    <td class="filename-col">002800-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">2EEC3750F51027D1191766C93A9679F52BCF352B790C9EFF468F3795765C3D46</span></td>
+                    <td class="sm3-col"><span class="hash-value">473D55BA39A692371998DAA1261C7A236417353CF61B92979D2B28A08E3518FD</span></td>
+                    <td class="remark-col">王贵平的看守所入所健康档案辅助检查</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/002800-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明王贵平体检结果及收押情况</td>
+                    <td class="mark-col">体检结论记录"肝脏小血管瘤待排；右眼部左背部淤青，双手背肿胀；请示刘廷祥所长协议收押，三级风险，突发精神异常"，被检查人显示为"无名王"，当时王贵平因之前被签多份不知情文书，所以签了"无名"二字，"王"字是押送人员补签的。</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:38:22</td>
+                    <td class="filename-col">002900-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">1E570A8843C36E494E1A2B0EDCA04D2B8D23B928A4DA60E4FA8442DA71943835</span></td>
+                    <td class="sm3-col"><span class="hash-value">BBD92DB1EC67222528CCDF96008AED6150EFCDB6E7C2236B5DA844EBE768FF44</span></td>
+                    <td class="remark-col">贵阳市云岩区人民医院的彩超检查报告</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/002900-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明王贵平医疗检查时间</td>
+                    <td class="mark-col">被检查人是王贵平，显示时间是2019年1月21日14时28分。</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:35:00</td>
+                    <td class="filename-col">003000-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">42CE8B05FA1AA46FA843059A5B9BC32288AA8AE128FD0DC804F00A0BE94DBEBB</span></td>
+                    <td class="sm3-col"><span class="hash-value">0084D9650116A51BC5D89D09AE6259824E91A409217155AFEEEC3903EBC88556</span></td>
+                    <td class="remark-col">贵阳市云岩区人民医院DR诊断报告单</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/003000-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明王贵平医疗检查时间</td>
+                    <td class="mark-col">被检查人是王贵平，检查部位为胸双手，显示时间是2019年1月21日。</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  17:33:10</td>
+                    <td class="filename-col">003100-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">3724A6C6AB088A4D89040A54E51BAECA9E79D61615227FEE256C30E221DD16A9</span></td>
+                    <td class="sm3-col"><span class="hash-value">0167377FEDC1237B5CAEECE0CFE512C79B84C169C0A18F61F36575825B8D4480</span></td>
+                    <td class="remark-col">贵阳市云岩区人民医院心电图</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/003100-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明王贵平医疗检查时间</td>
+                    <td class="mark-col">被检查人是王贵平，显示时间是2019年1月21日</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:26:36</td>
+                    <td class="filename-col">003200-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">D2BE90F9105939646D926E4548A94291541CF6509814BFBBB42940E0AF9AEF1A</span></td>
+                    <td class="sm3-col"><span class="hash-value">4790DAD4442194F3BEB566D66111ADBA2AD1BF5AB3F915AAA95981C0993722DF</span></td>
+                    <td class="remark-col">贵阳市云岩区人民医院DR诊断报告单</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/003200-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明王贵平医疗检查时间</td>
+                    <td class="mark-col">被检查人是王贵平，检查部位为胸部，显示时间是2019年1月21日</td>
+                </tr>
+                <tr>
+                    <td>32</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:24:26</td>
+                    <td class="filename-col">003300-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">64574B827FF7B430C82F38B7B9A5B286394926F4E5FF9F1E5915FC1D8851F2AB</span></td>
+                    <td class="sm3-col"><span class="hash-value">9DBE334A92A76D3E1BDBB3E72A9535F8FA62B9E3EA06AB77D109C9C1A0FB55D5</span></td>
+                    <td class="remark-col">贵阳市云岩区人民医院血常规检查</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/003300-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明王贵平医疗检查时间</td>
+                    <td class="mark-col">被检查人是王贵平，显示时间是2019年1月21日14时06分。</td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:23:34</td>
+                    <td class="filename-col">003400-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">35F9C528BF36FEFE1B327BD44B1A14909F50058A568F75504A7DB6FF2ACCFEA7</span></td>
+                    <td class="sm3-col"><span class="hash-value">058620DC59DCCD447176D125D0C82169FAC9BD7DF2E92C89FA37837BEB219699</span></td>
+                    <td class="remark-col">王贵平的自书辩护词第1页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/003400-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col"></td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>34</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:19:42</td>
+                    <td class="filename-col">003500-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">9E18D0719861871F9978FDB28878710351115EC102EB1EEDC990F00620832533</span></td>
+                    <td class="sm3-col"><span class="hash-value">7E094DC73974E6EEC29D1D1B00C56EE1AC6CB3F7A412514EC46A387C2D969B9D</span></td>
+                    <td class="remark-col">王贵平的自书辩护词第2页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/003500-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col"></td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>35</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:18:46</td>
+                    <td class="filename-col">003600-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">EDAE416E741365914515F1BAC42953EF4FB1964949E4AAE4652027055FA8ADBD</span></td>
+                    <td class="sm3-col"><span class="hash-value">CD9305C7EDD6E83A43CEFA1B63D8B3F02C8237D22F6043AC3FFE8F48F1983F20</span></td>
+                    <td class="remark-col">王贵平的自书辩护词第3页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/003600-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col"></td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>36</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:14:08</td>
+                    <td class="filename-col">003700-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">6E05C6919F2D83B047E8E7046187F0CFE28A335140610E2C1B5A5565A82C2A1A</span></td>
+                    <td class="sm3-col"><span class="hash-value">5DADB67AC768D3A8DE7B47B35CFACB6C1CD2AFB5566DC308680D610BFCD88F19</span></td>
+                    <td class="remark-col">王贵平的自书辩护词第1页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/003700-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col"></td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>37</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:13:26</td>
+                    <td class="filename-col">003800-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">CEC5CA7A3D33966B205DA556FEFFBB0B664798CF3CD26282085C1254B587FB91</span></td>
+                    <td class="sm3-col"><span class="hash-value">C588E8533A258BA5A3B5A78E49625F1D1A765D88317101A10400359070DF735A</span></td>
+                    <td class="remark-col">王贵平的自书辩护词第2页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/003800-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col"></td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>38</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:10:50</td>
+                    <td class="filename-col">003900-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">0338EA5CA2AB3439753316DD2F4F00D5EA103667DD0BD03B9CF0281F4DD97AD7</span></td>
+                    <td class="sm3-col"><span class="hash-value">34EDCE4FD8D9F0ABA9D08AC9B5072CA17459F80BDFB7E0641A9E53573DA68C8D</span></td>
+                    <td class="remark-col">王贵平的自书辩护词第3页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/003900-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col"></td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>39</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:08:44</td>
+                    <td class="filename-col">004000-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">AAEE2ADED9F3BEF68A9798194CA9F30A1CE080C723CED9DA67CDC0D1BAC8D902</span></td>
+                    <td class="sm3-col"><span class="hash-value">21092008152982FA25D14F899633FEB7375C479A75B170E6DAD46435C82F598F</span></td>
+                    <td class="remark-col">王贵平的自书辩护词第1页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/004000-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col"></td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>40</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:53:36</td>
+                    <td class="filename-col">004100-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">CC7CC9FF1BE40C92EA2EFC9E9911CEAAC53B87B54EDDC040119D96BEE40B372A</span></td>
+                    <td class="sm3-col"><span class="hash-value">DC0FDEF953151F446FB84642346D16245E14B1D0C94A1DA6A40401269E5CE9A8</span></td>
+                    <td class="remark-col">王贵平的自书辩护词第2页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/004100-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col"></td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>41</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:50:04</td>
+                    <td class="filename-col">004200-相关证据材料.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">707670FA383E6C80B3F09F96C2ED9E15A9E202A2D3ACD5E0D79611B5EC97773B</span></td>
+                    <td class="sm3-col"><span class="hash-value">BA66CE3E3F325C4B988A7BDE44B3044A766994B72FB9BFE9675E41795B05CC6A</span></td>
+                    <td class="remark-col">王贵平的自书辩护词第3页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/004200-相关证据材料.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col"></td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>42</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:49:08</td>
+                    <td class="filename-col">004300-刑事判决书.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">ABB73DBF5EBF1FF5A14A1F879712DAF8EC2515B504F8DEA6E5A85E5248166F1B</span></td>
+                    <td class="sm3-col"><span class="hash-value">373F034168AC42040B6E535B9FA1A84C1483D971DA5DFFF6DB99C5F9A83FAB23</span></td>
+                    <td class="remark-col">（2019）黔0103刑初821号判决书第1页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/004300-刑事判决书.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明判决书内容及可能存在的变造问题</td>
+                    <td class="mark-col">判决书也没有记录是否有退侦或延期，疑似给事后变造退侦留空间吧。</td>
+                </tr>
+                <tr>
+                    <td>43</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:46:52</td>
+                    <td class="filename-col">004400-刑事判决书.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">5EB3510C0BA5E0609730DCA332B4FA4C3948332804C71FF7F6B9C6F5A7B791A8</span></td>
+                    <td class="sm3-col"><span class="hash-value">2A73D2778F06AEE20B2B69C0F4D2BBF1A73C56E78E6A2E35C9FE94E841486E3C</span></td>
+                    <td class="remark-col">（2019）黔0103刑初821号判决书第2页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/004400-刑事判决书.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明判决书内容及异常字符问题</td>
+                    <td class="mark-col">主文中部区域存在"王UI平"异常字符，因为电脑打字输出中文汉字与英文大写字母混搭的字符，需切换功能键盘，存在主观故意，疑似释放信号，恶意窜通。</td>
+                </tr>
+                <tr>
+                    <td>44</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:44:56</td>
+                    <td class="filename-col">004500-刑事判决书.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">28F241AF8BF5BD80F9DF9C6DF5AF79A0178E1E90B95D1974503C8E653CD20634</span></td>
+                    <td class="sm3-col"><span class="hash-value">705ECDE6006CA9777F821D0F5A440059875C8B962F82D5D7E650C6ED6D79F32C</span></td>
+                    <td class="remark-col">（2019）黔0103刑初821号判决书第3页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/004500-刑事判决书.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明判决书落款时间</td>
+                    <td class="mark-col">落款日期是2019年7月29日</td>
+                </tr>
+                <tr>
+                    <td>45</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:44:12</td>
+                    <td class="filename-col">004600-宣判笔录及送达回证.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">B3F518E9055B4ECB4114DBC558F6A06FF94D33E9139034CEEC7D651A48A26E20</span></td>
+                    <td class="sm3-col"><span class="hash-value">3DC5C718ADB4093F60540666DB4A712290B9971A5F24B1AE5771319D385DB695</span></td>
+                    <td class="remark-col">宣判笔录</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/004600-宣判笔录及送达回证.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明宣判情况及王贵平上诉意愿</td>
+                    <td class="mark-col">日期是2019年8月1日，有王贵平不服判，要上诉，事实不清的记载。</td>
+                </tr>
+                <tr>
+                    <td>46</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:41:56</td>
+                    <td class="filename-col">004700-宣判笔录及送达回证.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">3166AFEFDEC5055204DA2F99408EE6D5FC7952C0BF125157125C7BDC69152B06</span></td>
+                    <td class="sm3-col"><span class="hash-value">9BE2EA472515FD0AC2BD8D0974DA31348ECBCA044BDAA82AAC9E0A3DCFD3A6A4</span></td>
+                    <td class="remark-col">（2019）黔0103刑初821号判决书送达回证</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/004700-宣判笔录及送达回证.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明判决书送达情况</td>
+                    <td class="mark-col">受送达人为王贵平</td>
+                </tr>
+                <tr>
+                    <td>47</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:41:28</td>
+                    <td class="filename-col">004800-宣判笔录及送达回证.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">10C38DA3753C55932032E26EF590CB3F246388E570253C7A5B830C72DC7194A0</span></td>
+                    <td class="sm3-col"><span class="hash-value">583009C15AE7C4149E31BD94B929CE9874F35EAFCD3208DDFE203EC09DF26106</span></td>
+                    <td class="remark-col">（2019）黔0103刑初821号判决书送达回证</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/004800-宣判笔录及送达回证.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明判决书送达情况</td>
+                    <td class="mark-col">受送达人为周江红</td>
+                </tr>
+                <tr>
+                    <td>48</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:39:26</td>
+                    <td class="filename-col">004900-宣判笔录及送达回证.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">0654A45FF301C097824EA088CA355DD40A800DAB6E7A6E96D74B887FDC917F20</span></td>
+                    <td class="sm3-col"><span class="hash-value">F56A66C7DAB6B6C278800EF40EEC71A3A865B4F29D429FE00BFC4A6F36B05661</span></td>
+                    <td class="remark-col">（2019）黔0103刑初821号判决书送达回证</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/004900-宣判笔录及送达回证.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明判决书送达情况及代收人身份问题</td>
+                    <td class="mark-col">受送达人为辩护人，代收入是陈家如（一个不相干的陌生人，身份不明），未按手印，落款日期是2019年8月6日</td>
+                </tr>
+                <tr>
+                    <td>49</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月14日  18:37:42</td>
+                    <td class="filename-col">005000-提押票.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">57982BB43BA0FDA64745E45DBB0E4F80ACB37C1FD988238BD33FBD337C50C7B4</span></td>
+                    <td class="sm3-col"><span class="hash-value">AA0223ACDAF7E6854C3B2DF653A5820591F7084B29D75E9D3AD979DA49154CFB</span></td>
+                    <td class="remark-col">（2019）黔0103刑初821号提押票</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/005000-提押票.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明提押时间</td>
+                    <td class="mark-col">2019年7月2日一审法院开庭提押票</td>
+                </tr>
+                <tr>
+                    <td>50</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月15日  09:01:30</td>
+                    <td class="filename-col">005100-上诉移送函（稿）及退卷函.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">DCE48D9C91A0D7648FFBB4D2F4EC1CE8C920398843B9D0B3F2A04EA9069DA116</span></td>
+                    <td class="sm3-col"><span class="hash-value">34F74EECA0FD6D566FFC5011068093E47EFB9BA6C667CA13057A93EE5D371C2D</span></td>
+                    <td class="remark-col">移送函</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/005100-上诉移送函（稿）及退卷函.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明卷宗移送时间</td>
+                    <td class="mark-col">2019年8月14日一审院向二审院的卷宗移送函</td>
+                </tr>
+                <tr>
+                    <td>51</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月15日  08:58:16</td>
+                    <td class="filename-col">005300-刑事裁定书.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">55B9B9017B3FE2F77C4218ECF4AE0360BAC4F5F1FC8C124D52C77BEB9F844A1A</span></td>
+                    <td class="sm3-col"><span class="hash-value">81B4E95A7F6D6243F070500C37DEFB3AF3A2056B9AEA40EDE6C3D59B57331240</span></td>
+                    <td class="remark-col">（2019）黔01刑终667号刑事裁定书第1页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/005300-刑事裁定书.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明裁定书内容一致性</td>
+                    <td class="mark-col">与王贵平所持（2019）黔01刑终667号裁定书一致</td>
+                </tr>
+                <tr>
+                    <td>52</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月15日  08:57:50</td>
+                    <td class="filename-col">005400-刑事裁定书.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">047D546D81925E1A1D110BAC631973F2A5A9BD5F536E2E5B85018EF8AC0E6DF8</span></td>
+                    <td class="sm3-col"><span class="hash-value">7A416C262760DEB40CCA90E97EA8E4FF6D35C4988940BA304EB32E7AB2252964</span></td>
+                    <td class="remark-col">（2019）黔01刑终667号刑事裁定书第2页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/005400-刑事裁定书.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col"></td>
+                    <td class="mark-col"></td>
+                </tr>
+                <tr>
+                    <td>53</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月15日  08:56:22</td>
+                    <td class="filename-col">005500-刑事裁定书.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">8C5E1796BF30A73DE21F676CCA424EDB7D33F2B3357DD09174CC62B4AB1CAC4E</span></td>
+                    <td class="sm3-col"><span class="hash-value">39A69DD709F8E81DDD1A5417F06CED73653558496F5F89A50863AA6CA6E319FA</span></td>
+                    <td class="remark-col">（2019）黔01刑终667号刑事裁定书第3页</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/005500-刑事裁定书.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明裁定书内容一致性及落款时间</td>
+                    <td class="mark-col">与王贵平所持（2019）黔01刑终667号裁定书一致，落款日期是2019年8月26日</td>
+                </tr>
+                <tr>
+                    <td>54</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月15日  08:54:58</td>
+                    <td class="filename-col">005600-执行通知书存根及回执.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">CB2358A1B3C4D3DB54F3B5BB9360F88EB4D14EEC4DD527EBC91636D75CD80B58</span></td>
+                    <td class="sm3-col"><span class="hash-value">31BAF9EADC505E309FF3A428BDE4414BD542238A1AE0ED6969B3DE1B94483002</span></td>
+                    <td class="remark-col">（2019）黔0103刑初821号执行通知书（存根联）</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/005600-执行通知书存根及回执.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明执行通知书内容及通知单位问题</td>
+                    <td class="mark-col">落款日期是2019年9月4日，被通知单位居然为"贵阳市无固定住所"，这能代表看守所吗？</td>
+                </tr>
+                <tr>
+                    <td>55</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2020年12月15日  08:53:24</td>
+                    <td class="filename-col">005700-执行通知书存根及回执.jpg</td>
+                    <td class="sha256-col"><span class="hash-value">EAA0236804AFD29B96718693A2D12724EC6A10F5B16247D8CD89F7110F26EF91</span></td>
+                    <td class="sm3-col"><span class="hash-value">66177FD8C38BB620410212918B82115EA2E2F971D8838307D92D4502E1A1851F</span></td>
+                    <td class="remark-col">（2019）黔0103刑初821号执行通知书（回执）</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/正卷1/005700-执行通知书存根及回执.jpg" target="_blank">查看</a></td>
+                    <td class="purpose-col">证明执行通知书回执及回应时间</td>
+                    <td class="mark-col">看守所确认给一审院的回应，落款日期2019年9月27日</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-title">三、（2019）黔0103刑初821号.pdf【2025年9月2日在一审档案室刻录取得】</div>
+    <div class="table-container">
+        <table id="pdf文件">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th class="source-col">来源</th>
+                    <th class="time-col">文件形成时间</th>
+                    <th class="filename-col">文件名</th>
+                    <th class="sha256-col">SHA256哈希值</th>
+                    <th class="sm3-col">SM3哈希值</th>
+                    <th class="remark-col">备注</th>
+                    <th>查看原件</th>
+                    <th class="purpose-col">证明目的</th>
+                    <th class="mark-col">阅卷标注</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="source-col">贵阳市云岩区人民法院档案室</td>
+                    <td class="time-col">2025年9月1日  09:48:24</td>
+                    <td class="filename-col">（2019）黔0103刑初821号.pdf</td>
+                    <td class="sha256-col"><span class="hash-value">A9079E98DB6033FD8531D53F54DBCAE7E856CE580E10B377B0E6D41739D37B45</span></td>
+                    <td class="sm3-col"><span class="hash-value">1E1AA7701A877A3C7D74A129319194E56BEA3CF3A4842A81EF60CFDB8EA37BA4</span></td>
+                    <td class="remark-col">2025年8月27日王贵平查档时因档案室出具的正卷材料无法院电子签章、依规定无与正本原件同等法律效力。档案工作人员回应需向技术人员现制，所以最终于2025年9月2日王贵平才拿到刻录好的、具有该院档案证明签章的PDF版电子卷宗材料</td>
+                    <td><a href="../../../法院的资料和归档/一审法院——（2019）黔0103刑初821号/(2019)黔0103刑初821号.pdf" target="_blank">查看</a></td>
+                    <td class="purpose-col">该PDF有法院档案室电子证明专用章，与原件正本具有同等法律效力</td>
+                    <td class="mark-col">制作时间明显滞后，提供的版本把所有卷宗材料统一在一个PDF文件，导致材料的形成时间无法与案件实际处理时间不匹配，真实性大打折扣。</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 四、阅卷结论（表格形式，风格与其它表格一致） -->
+    <div class="table-title">四、阅卷结论（修订表）</div>
+    <div class="table-container">
+        <table id="阅卷结论表">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th class="remark-col">结论类型</th>
+                    <th class="filename-col">事实依据（表/文件/时间/哈希）</th>
+                    <th class="purpose-col">适用法律条号（占位，待核验原文与链接）</th>
+                    <th class="mark-col">结论与建议</th>
+                    <th class="remark-col">状态/备注</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="remark-col">羁押/送押时限与记录不一致</td>
+                    <td class="filename-col">见表一第3行（滞留派出所：2019-01-20 19:05 至 2019-01-21 22:50）；表二文件名：002400-相关证据材料.jpg（入所记录显示2019-01-21 22:50），002900-相关证据材料.jpg（医院彩超 2019-01-21 14:28）</td>
+                    <td class="purpose-col">刑事诉讼法 第85条（拘留后送看守所24小时规定——待核验全文及权威链接）</td>
+                    <td class="mark-col">初步认定程序存在时限或记录矛盾；建议核对原始拘留、送押、收押登记及监控/押送笔录；如确认超期且无合法中止理由，应评估该期间证据采信影响并在审查意见中注明。</td>
+                    <td class="remark-col">待核验法律原文；需调取监控/原件核对</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td class="remark-col">起诉书送达事实冲突</td>
+                    <td class="filename-col">表二送达笔录：000900/001000/001100-送达起诉书副本笔录.jpg（送达记录显示2019-06-14，含拒收记录）；庭审笔录：001800/001900-刑事庭审笔录.jpg（庭审记录对是否收到起诉书记载冲突）</td>
+                    <td class="purpose-col">刑事诉讼法 相关送达规定（示例：第173条等——待核验全文及权威链接）</td>
+                    <td class="mark-col">建议核验送达回证、签收/拒收记录、代收人身份证明及留置送达适用条件；若无法确证合法送达，应在书面意见中说明对程序效力与实体裁判的可能影响，并建议补证或申请司法适用意见。</td>
+                    <td class="remark-col">待核验法律原文；对代收人身份存疑需补证</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td class="remark-col">医疗记录与入所时间/电子卷宗形成时间不一致</td>
+                    <td class="filename-col">表二：002900-彩超（2019-01-21 14:28）、003300-血常规（2019-01-21 14:06）；表一与表二入所记录（2019-01-21 22:50）；表三合并PDF刻录时间：2025-09-02（文件名：（2019）黔0103刑初821号.pdf）</td>
+                    <td class="purpose-col">证据真实性与文书形成时间相关法律与司法解释（待核验权威条文与链接）</td>
+                    <td class="mark-col">建议对原始医院单据与入所登记进行逐项比对并做时间戳/真伪鉴定；核查电子卷宗的制作流程与哈希值，若电子版与纸本不一致，应以纸质原件为优先并在卷宗说明处理差异。</td>
+                    <td class="remark-col">需技术鉴定与纸本比对；电子卷宗刻录时间为关键证据</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td class="remark-col">裁判文书/证据疑似篡改或录入错误</td>
+                    <td class="filename-col">判决书文件：004300-004500-刑事判决书.jpg（含异常字符“王UI平”等）；相关电子文件哈希见表二/三相应哈希栏</td>
+                    <td class="purpose-col">关于文书真实性、证据完整性及发回重审适用情形（示例：第238条等——待核验全文及权威链接）</td>
+                    <td class="mark-col">建议比对纸质原件与档案室留存版本；对哈希不匹配或刻录时间异常的电子材料申请技术鉴定（电子数据完整性、哈希校验、刻录记录分析）；如鉴定或核实属实并影响定罪/量刑或程序合法性，建议在审查/再审环节提出发回重审或纠正程序的具体请求。</td>
+                    <td class="remark-col">已列出哈希供鉴定；需档案室配合与技术鉴定</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
